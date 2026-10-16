@@ -330,12 +330,11 @@ def main():
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(content)
     present = [p for d in ("Apps", ".github/readme-icons") for p in (ROOT / d).rglob("*") if p.is_file()]
-    for leftover in sorted(p.relative_to(ROOT).as_posix() for p in present):
-        if leftover not in wanted:
-            stale.append(leftover)
-            if not args.check:
-                (ROOT / leftover).unlink()
+    removed = [p for p in sorted(p.relative_to(ROOT).as_posix() for p in present) if p not in wanted]
+    stale += removed
     if not args.check:
+        for leftover in removed:
+            (ROOT / leftover).unlink()
         for folder in (ROOT / "Apps").iterdir():
             if folder.is_dir() and not any(folder.iterdir()):
                 folder.rmdir()
@@ -345,7 +344,7 @@ def main():
         print("run: python tools/generate.py <unraid-apps checkout>", file=sys.stderr)
         return 1
     for name in stale:
-        print(f"updated {name}")
+        print(f"{'removed' if name in removed else 'updated'} {name}")
     return 0
 
 
