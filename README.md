@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/zimaos-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/zimaos-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-21-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-22-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/zimaos-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/zimaos-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://github.com/IceWhaleTech/ZimaOS"><img src="https://img.shields.io/badge/ZimaOS-Community%20store-1a1a1a?style=for-the-badge&logoColor=white" alt="ZimaOS community store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -29,6 +29,15 @@ A community app store for <a href="https://github.com/IceWhaleTech/ZimaOS">ZimaO
 
 **ArrowLoop**<br>
 Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.
+
+<br clear="all">
+
+<img src=".github/readme-icons/bombvault.png" width="84" align="left" alt="BombVault">
+<a href="https://github.com/junkerderprovinz/bombvault#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+<a href="https://github.com/junkerderprovinz/bombvault/blob/main/deploy/docker-compose.generic.yml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
+
+**BombVault**<br>
+Backup and full disaster recovery for containers, VMs and the flash, powered by restic, with one-click backup and cross-server restore.
 
 <br clear="all">
 

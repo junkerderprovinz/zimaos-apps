@@ -1,0 +1,50 @@
+name: bombvault
+services:
+  bombvault:
+    image: junkerderprovinz/bombvault:latest
+    container_name: bombvault
+    restart: unless-stopped
+    hostname: bombvault
+    ports:
+    - 3443:3443
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/host/user
+    - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      HTTP_ONLY: 'false'
+      APP_KEY: ''
+      HOST_SOURCE_ROOT: /DATA
+      LIBVIRT_HOST: 192.168.x.x
+      LIBVIRT_SSH_PORT: '22'
+      LIBVIRT_SSH_USER: root
+      PLATFORM: generic
+      DATA_ROOT_SEGMENTS: AppData
+    extra_hosts:
+    - host.docker.internal:host-gateway
+x-casaos:
+  id: com.junkerderprovinz.bombvault
+  main: bombvault
+  index: /
+  port_map: '3443'
+  scheme: https
+  title:
+    en_US: BombVault
+  tagline:
+    en_US: Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.
+  description:
+    en_US: Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/BombVault/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 10.1.1
+  tips:
+    before_install:
+      en_US: 'Set APP_KEY under Custom Installation before the first start. APP_KEY takes 64 lowercase hex characters, for example from openssl rand -hex 32. Keep it safe: without it the encrypted backups cannot be restored.'
+  repo: https://github.com/junkerderprovinz/bombvault
+  support: https://github.com/junkerderprovinz/bombvault/issues
