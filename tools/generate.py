@@ -183,26 +183,29 @@ def data_path(volume, overrides):
 
 
 def build(feed, gen_compose, app, overrides):
-    root = ET.parse(feed / app / f"{app}.xml").getroot()
-    text, _ = gen_compose.compose(app)
+    xml = overrides.get("xml", f"{app}.xml")
+    root = ET.parse(feed / app / xml).getroot()
+    text, _ = gen_compose.compose(app, xml)
     required = re.findall(r"^\s+(\w+):.*# required$", text, re.M)
     doc = yaml.safe_load(text)
     service = doc["services"][app]
 
-    service["volumes"] = [data_path(v, overrides) for v in service.get("volumes", [])]
+    drop = overrides.get("drop_paths", [])
+    service["volumes"] = [data_path(v, overrides) for v in service.get("volumes", []) if v.split(":")[1] not in drop]
     if not service["volumes"]:
         del service["volumes"]
     env = service.get("environment") or {}
     for key, value in SYSTEM_VALUES.items():
         if key in env:
             env[key] = value
-    defaulted = []
+    env.update(overrides.get("env", {}))
+    defaulted = [key for key in required if key in overrides.get("env", {})]
     for key in required:
-        default = overrides.get("env", {}).get(key) or next(
-            (value for pattern, value in CREDENTIALS if pattern.search(key)), None)
+        default = next((value for pattern, value in CREDENTIALS if pattern.search(key)), None)
         if default and not env.get(key):
             env[key] = default
             defaulted.append(key)
+    defaulted = [key for key in required if key in defaulted]
     required = [key for key in required if key not in defaulted]
 
     ui = web_ui(root, service.get("ports", []))
@@ -246,6 +249,8 @@ def build(feed, gen_compose, app, overrides):
         values = " and ".join(f"{key} as {env[key]}" for key in defaulted)
         tips.append(f"Starts with {values}. Change {'it' if one else 'them'} under Custom Installation "
                     "before you store real data.")
+    if overrides.get("tip"):
+        tips.append(overrides["tip"])
     if tips:
         meta["tips"] = {"before_install": {"en_US": " ".join(tips)}}
     if repo:

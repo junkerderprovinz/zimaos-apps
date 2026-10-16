@@ -263,7 +263,7 @@ To change an app, edit its template in unraid-apps, not the files in `Apps/`, `.
 python3 tools/generate.py ../unraid-apps
 ```
 
-`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`), name the upstream developer (`developer`), replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid, give a starting value an app needs in another form (`env`, Silo wants eight characters) or pick another internal name (`name`). CasaOS keys its catalog by that name across all stores, so Excalidraw and HandBrake use `excalidraw-jdp` and `handbrake-jdp` to sit next to the official ones instead of hiding them.
+`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`), name the upstream developer (`developer`), replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid, set variables (`env`, for example Silo's start password, which MinIO wants eight characters long), read a template file with another name (`xml`), leave a path out (`drop_paths`), add a line to the install tip (`tip`) or pick another internal name (`name`). CasaOS keys its catalog by that name across all stores, so Excalidraw and HandBrake use `excalidraw-jdp` and `handbrake-jdp` to sit next to the official ones instead of hiding them.
 
 
 ## How AI is used here
