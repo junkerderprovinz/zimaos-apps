@@ -38,6 +38,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 2.6.0
+  version: 2.6.1
   repo: https://github.com/junkerderprovinz/krusader
   support: https://github.com/junkerderprovinz/krusader/issues

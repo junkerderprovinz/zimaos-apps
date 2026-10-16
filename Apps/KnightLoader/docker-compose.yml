@@ -31,6 +31,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 2.1.1
+  version: 2.1.4
   repo: https://github.com/junkerderprovinz/knightloader
   support: https://github.com/junkerderprovinz/knightloader/issues

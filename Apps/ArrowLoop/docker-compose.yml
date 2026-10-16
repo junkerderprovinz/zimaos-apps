@@ -33,6 +33,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 2.2.1
+  version: 2.2.4
   repo: https://github.com/junkerderprovinz/arrowloop
   support: https://github.com/junkerderprovinz/arrowloop/issues
