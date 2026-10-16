@@ -1,0 +1,32 @@
+name: trickwork
+services:
+  trickwork:
+    image: ghcr.io/junkerderprovinz/trickwork:latest
+    container_name: trickwork
+    restart: unless-stopped
+    ports:
+    - 3210:3210
+    environment:
+      PORT: '3210'
+x-casaos:
+  id: com.junkerderprovinz.trickwork
+  main: trickwork
+  index: /
+  port_map: '3210'
+  scheme: http
+  title:
+    en_US: TrickWork
+  tagline:
+    en_US: Turns images into proportional-font-aware ASCII art - a rebuild of ASCII Gen 2, picking characters by real ink coverage, not brightness.
+  description:
+    en_US: 'TrickWork turns your images into proportional-font-aware ASCII art - a rebuild of the abandoned ASCII Gen 2, with a live interactive preview and TXT/XHTML/RTF/PNG export. Characters are picked by how much visual "ink" they actually cover at your chosen font, not just by brightness, so proportional (non-monospace) fonts render correctly instead of looking stretched or squashed. Nine of ASCII Gen 2''s own original character ramps are built in, weighting mechanic included: repeat a character in the ramp and it claims proportionally more of the brightness range, exactly like the original. Fully stateless - no database, no accounts, nothing to configure beyond the port.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/TrickWork/icon.png
+  category: Media
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 1.5.0
+  repo: https://github.com/junkerderprovinz/trickwork
+  support: https://github.com/junkerderprovinz/trickwork/issues

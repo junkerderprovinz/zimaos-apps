@@ -1,0 +1,36 @@
+name: knightloader
+services:
+  knightloader:
+    image: junkerderprovinz/knightloader:latest
+    container_name: knightloader
+    restart: unless-stopped
+    ports:
+    - 8749:8749
+    volumes:
+    - /DATA/AppData/$AppID:/data
+    - /DATA/Downloads:/data/downloads
+    - /DATA/AppData/$AppID/watch:/watch
+    environment:
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.knightloader
+  main: knightloader
+  index: /
+  port_map: '8749'
+  scheme: http
+  title:
+    en_US: KnightLoader
+  tagline:
+    en_US: Self-hosted download manager for hosters, debrid, torrents, Usenet and video, with an Android app and a browser extension.
+  description:
+    en_US: A download manager that downloads everything and kneels to nothing.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/KnightLoader/icon.png
+  category: Media
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 2.1.1
+  repo: https://github.com/junkerderprovinz/knightloader
+  support: https://github.com/junkerderprovinz/knightloader/issues

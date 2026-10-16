@@ -1,0 +1,39 @@
+name: couchdb
+services:
+  couchdb:
+    image: couchdb:latest
+    container_name: couchdb
+    restart: unless-stopped
+    ports:
+    - 5984:5984
+    volumes:
+    - /DATA/AppData/$AppID/data:/opt/couchdb/data
+    - /DATA/AppData/$AppID/local.d:/opt/couchdb/etc/local.d
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: casaos
+x-casaos:
+  id: com.junkerderprovinz.couchdb
+  main: couchdb
+  index: /_utils/
+  port_map: '5984'
+  scheme: http
+  title:
+    en_US: couchdb
+  tagline:
+    en_US: The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.
+  description:
+    en_US: The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/couchdb/icon.png
+  category: Developer
+  author: Junker der Provinz
+  developer: Apache Software Foundation
+  architectures:
+  - amd64
+  - arm64
+  version: 3.5.3
+  tips:
+    before_install:
+      en_US: Starts with COUCHDB_PASSWORD as casaos. Change it under Custom Installation before you store real data.
+  repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/README.md
+  support: https://github.com/junkerderprovinz/unraid-apps/issues

@@ -1,0 +1,49 @@
+name: securo
+services:
+  securo:
+    image: junkerderprovinz/securo:latest
+    container_name: securo
+    restart: unless-stopped
+    ports:
+    - 3000:8080
+    volumes:
+    - /DATA/AppData/$AppID:/data
+    environment:
+      BUILTIN_POSTGRES: 'true'
+      POSTGRES_USER: postgres
+      BUILTIN_REDIS: 'true'
+      REGISTRATION_ENABLED: 'true'
+      POSTGRES_PORT: '5432'
+      POSTGRES_DB: securo
+      REDIS_PORT: '6379'
+      REDIS_DB: '0'
+      TRUSTED_PROXY_HOPS: '1'
+      SIMPLEFIN_ENABLED: 'false'
+      SIMPLEFIN_API_URL: https://beta-bridge.simplefin.org
+      OIDC_ENABLED: 'false'
+      OIDC_PROVIDER_NAME: OIDC
+      LOCAL_AUTH_ENABLED: 'true'
+      PUID: $PUID
+      PGID: $PGID
+x-casaos:
+  id: com.junkerderprovinz.securo
+  main: securo
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: Securo
+  tagline:
+    en_US: The Securo finance manager with its worker and scheduler in one container, on your own PostgreSQL and Redis or on built-in ones.
+  description:
+    en_US: 'Securo is a self-hosted personal finance manager: accounts, transactions, budgets, goals, assets and reports, with imports from OFX, QIF, CAMT and CSV and optional bank sync for European, US and Brazilian banks. Upstream runs it as six containers; this image puts the official backend and web app, the Celery worker and the scheduler into one.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Securo/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 1.0.0
+  repo: https://github.com/junkerderprovinz/securo
+  support: https://github.com/junkerderprovinz/securo/issues

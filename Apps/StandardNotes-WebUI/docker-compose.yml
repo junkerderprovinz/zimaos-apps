@@ -1,0 +1,29 @@
+name: standardnotes-webui
+services:
+  standardnotes-webui:
+    image: standardnotes/web:latest
+    container_name: standardnotes-webui
+    restart: unless-stopped
+    ports:
+    - 3001:80
+x-casaos:
+  id: com.junkerderprovinz.standardnotes-webui
+  main: standardnotes-webui
+  index: /
+  port_map: '3001'
+  scheme: http
+  title:
+    en_US: StandardNotes-WebUI
+  tagline:
+    en_US: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
+  description:
+    en_US: The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/StandardNotes-WebUI/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Standard Notes
+  architectures:
+  - amd64
+  version: 2026.10.15
+  repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/README.md
+  support: https://github.com/junkerderprovinz/unraid-apps/issues

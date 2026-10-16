@@ -1,0 +1,42 @@
+name: rustfs
+services:
+  rustfs:
+    image: rustfs/rustfs:latest
+    container_name: rustfs
+    restart: unless-stopped
+    user: 0:0
+    ports:
+    - 9000:9000
+    - 9001:9001
+    volumes:
+    - /DATA/AppData/$AppID/data:/data
+    environment:
+      RUSTFS_ACCESS_KEY: admin
+      RUSTFS_SECRET_KEY: casaos
+      RUSTFS_CONSOLE_CORS_ALLOWED_ORIGINS: '*'
+      RUSTFS_OBS_LOGGER_LEVEL: warn
+x-casaos:
+  id: com.junkerderprovinz.rustfs
+  main: rustfs
+  index: /
+  port_map: '9001'
+  scheme: http
+  title:
+    en_US: RustFS
+  tagline:
+    en_US: 'An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.'
+  description:
+    en_US: RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/RustFS/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: RustFS
+  architectures:
+  - amd64
+  - arm64
+  version: 1.0.1
+  tips:
+    before_install:
+      en_US: Starts with RUSTFS_ACCESS_KEY as admin and RUSTFS_SECRET_KEY as casaos. Change them under Custom Installation before you store real data.
+  repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/README.md
+  support: https://github.com/junkerderprovinz/unraid-apps/issues

@@ -1,0 +1,39 @@
+name: stellarium
+services:
+  stellarium:
+    image: junkerderprovinz/stellarium:latest
+    container_name: stellarium
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.stellarium
+  main: stellarium
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: Stellarium
+  tagline:
+    en_US: 'The Stellarium planetarium in your browser on a fast Selkies web desktop: pan the sky, zoom a nebula, scrub through time, no VNC client.'
+  description:
+    en_US: 'Stellarium, the free, open-source desktop planetarium, on a Selkies web desktop. Explore a photorealistic real-time sky in your browser: no VNC client, no local install. There is no maintained browser-desktop build of the actual Stellarium application ("Stellarium Web" is a separate, much lighter reimplementation), so this fills a genuine gap: a modern Selkies (WebRTC) build of the real thing for amd64 and arm64.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Stellarium/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Stellarium
+  architectures:
+  - amd64
+  - arm64
+  version: 1.2.0
+  repo: https://github.com/junkerderprovinz/stellarium
+  support: https://github.com/junkerderprovinz/stellarium/issues

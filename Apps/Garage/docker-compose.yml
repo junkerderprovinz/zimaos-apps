@@ -1,0 +1,39 @@
+name: garage
+services:
+  garage:
+    image: junkerderprovinz/garage:latest
+    container_name: garage
+    restart: unless-stopped
+    ports:
+    - 3900:3900
+    - 3909:3909
+    - 3902:3902
+    volumes:
+    - /DATA/AppData/$AppID/data:/data
+    - /DATA/AppData/$AppID/config:/config
+    environment:
+      DB_ENGINE: sqlite
+      PUID: $PUID
+      PGID: $PGID
+x-casaos:
+  id: com.junkerderprovinz.garage
+  main: garage
+  index: /
+  port_map: '3909'
+  scheme: http
+  title:
+    en_US: Garage
+  tagline:
+    en_US: Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.
+  description:
+    en_US: Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Garage/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Deuxfleurs
+  architectures:
+  - amd64
+  - arm64
+  version: 1.0.1
+  repo: https://github.com/junkerderprovinz/garage
+  support: https://github.com/junkerderprovinz/garage/issues

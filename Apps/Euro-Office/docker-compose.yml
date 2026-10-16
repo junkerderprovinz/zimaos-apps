@@ -1,0 +1,43 @@
+name: euro-office
+services:
+  euro-office:
+    image: ghcr.io/junkerderprovinz/euro-office:latest
+    container_name: euro-office
+    restart: unless-stopped
+    ports:
+    - 9900:80
+    - 9943:443
+    volumes:
+    - /DATA/AppData/$AppID/data:/var/www/euro-office/Data
+    - /DATA/AppData/$AppID/certs:/certs:ro
+    environment:
+      JWT_SECRET: casaos
+      WOPI_ENABLED: 'true'
+      JWT_ENABLED: 'true'
+      USE_UNAUTHORIZED_STORAGE: 'true'
+      ONLYOFFICE_HTTPS_HSTS_ENABLED: 'true'
+x-casaos:
+  id: com.junkerderprovinz.euro-office
+  main: euro-office
+  index: /
+  port_map: '9900'
+  scheme: http
+  title:
+    en_US: Euro-Office
+  tagline:
+    en_US: Sovereign, OnlyOffice-compatible document server for browser editing of Office and OpenDocument files, wired into OpenCloud over WOPI.
+  description:
+    en_US: Euro Office Document Server - a sovereign, European document server for browser-based editing of text documents, spreadsheets and presentations. It is a maintained fork of the OnlyOffice Document Server, so it speaks the same WOPI and OnlyOffice APIs and plugs straight into OpenCloud (and Nextcloud/ownCloud). Use it to edit .docx / .xlsx / .pptx and .odt / .ods / .odp files right in your browser, without any desktop office suite.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Euro-Office/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Euro-Office
+  architectures:
+  - amd64
+  - arm64
+  version: 1.2.1
+  tips:
+    before_install:
+      en_US: Starts with JWT_SECRET as casaos. Change it under Custom Installation before you store real data.
+  repo: https://github.com/junkerderprovinz/euro-office
+  support: https://github.com/junkerderprovinz/euro-office/issues

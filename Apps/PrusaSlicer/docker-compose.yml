@@ -1,0 +1,40 @@
+name: prusaslicer
+services:
+  prusaslicer:
+    image: junkerderprovinz/prusaslicer:latest
+    container_name: prusaslicer
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.prusaslicer
+  main: prusaslicer
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: PrusaSlicer
+  tagline:
+    en_US: 'The PrusaSlicer 3D-printing slicer in your browser on a fast Selkies web desktop: slice and export G-code, no VNC client (amd64 + arm64).'
+  description:
+    en_US: 'PrusaSlicer, the FDM/SLA 3D-printing slicer from Prusa Research, on a Selkies web desktop. Slice in your browser: no VNC client, no local install. LinuxServer ship OrcaSlicer and Cura on Selkies but no PrusaSlicer; the only other browser images are years-old, abandoned noVNC builds. This is a maintained, modern Selkies (WebRTC) build for amd64 and arm64.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/PrusaSlicer/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Prusa Research
+  architectures:
+  - amd64
+  - arm64
+  version: 1.2.0
+  repo: https://github.com/junkerderprovinz/prusaslicer
+  support: https://github.com/junkerderprovinz/prusaslicer/issues

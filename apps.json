@@ -1,0 +1,91 @@
+{
+  "arrowloop": {
+    "category": "Productivity",
+    "paths": {"/data": "/DATA"}
+  },
+  "couchdb": {
+    "category": "Developer",
+    "developer": "Apache Software Foundation"
+  },
+  "euro-office": {
+    "category": "Productivity",
+    "developer": "Euro-Office"
+  },
+  "excalidraw": {
+    "category": "Productivity",
+    "developer": "Excalidraw"
+  },
+  "featherdrop": {
+    "category": "Productivity"
+  },
+  "garage": {
+    "category": "Others",
+    "developer": "Deuxfleurs"
+  },
+  "handbrake": {
+    "category": "Media",
+    "developer": "HandBrake",
+    "paths": {"/watch": "/DATA/Media/HandBrake/watch", "/output": "/DATA/Media/HandBrake/output", "/storage": "/DATA"}
+  },
+  "jdownloader": {
+    "category": "Media",
+    "developer": "AppWork",
+    "paths": {"/downloads": "/DATA/Downloads"}
+  },
+  "knightloader": {
+    "category": "Media",
+    "paths": {"/data/downloads": "/DATA/Downloads"}
+  },
+  "krusader": {
+    "category": "Productivity",
+    "developer": "KDE",
+    "paths": {"/storage": "/DATA"}
+  },
+  "opencloud": {
+    "category": "Productivity",
+    "developer": "OpenCloud"
+  },
+  "prusaslicer": {
+    "category": "Others",
+    "developer": "Prusa Research",
+    "paths": {"/storage": "/DATA"}
+  },
+  "rustfs": {
+    "category": "Others",
+    "developer": "RustFS",
+    "tagline": "An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.",
+    "description": "RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving."
+  },
+  "seafile": {
+    "category": "Productivity",
+    "developer": "Seafile",
+    "tagline": "The official Seafile server, with its secrets generated on first start and MariaDB, Redis and the notification server built in.",
+    "description": "Seafile is a file sync and share server with desktop and mobile clients, libraries you can encrypt on the client, and built-in wikis."
+  },
+  "seaweedfs": {
+    "category": "Others",
+    "developer": "Chris Lu"
+  },
+  "securo": {
+    "category": "Productivity"
+  },
+  "silo": {
+    "category": "Others",
+    "developer": "Pigsty"
+  },
+  "standardnotes-webui": {
+    "category": "Productivity",
+    "developer": "Standard Notes"
+  },
+  "stellarium": {
+    "category": "Others",
+    "developer": "Stellarium"
+  },
+  "trickwork": {
+    "category": "Media"
+  },
+  "versitygw": {
+    "category": "Others",
+    "developer": "Versity"
+  }
+}

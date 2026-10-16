@@ -1,0 +1,86 @@
+name: Generate
+
+# Apps/, the README icons and the README's app list are built from
+# junkerderprovinz/unraid-apps. A pull request only checks that they are
+# current and that the store builds; main rebuilds them every night and on
+# demand, then publishes the store to GitHub Pages in the same run, because a
+# commit pushed with GITHUB_TOKEN starts no other workflow.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+env:
+  STORE_URL: https://junkerderprovinz.github.io/zimaos-apps
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: junkerderprovinz/unraid-apps
+          path: feed
+
+      - run: python3 -m pip install --quiet pyyaml
+
+      - name: Check
+        if: github.event_name == 'pull_request'
+        run: python3 tools/generate.py feed --check
+
+      - name: Build and commit
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 tools/generate.py feed
+          git add Apps .github/readme-icons README.md
+          if git diff --cached --quiet; then
+            echo "apps are current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Rebuild apps from unraid-apps $(git -C feed rev-parse --short HEAD)"
+          git push
+
+  publish:
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
+
+      - name: Build the store
+        uses: IceWhaleTech/build-appstore-action@c9bb47fad5b32d7928a07978fad68801f52e910f # v1.1.3
+        with:
+          source: .
+          output: dist
+          base-url: ${{ env.STORE_URL }}
+
+      - name: Publish
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          force_orphan: true

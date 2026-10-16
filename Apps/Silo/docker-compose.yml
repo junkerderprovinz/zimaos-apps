@@ -1,0 +1,40 @@
+name: silo
+services:
+  silo:
+    image: pgsty/silo:latest
+    container_name: silo
+    restart: unless-stopped
+    ports:
+    - 9000:9000
+    - 9001:9001
+    volumes:
+    - /DATA/AppData/$AppID/data:/data
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: casaos
+    command: server /data --console-address ":9001"
+x-casaos:
+  id: com.junkerderprovinz.silo
+  main: silo
+  index: /
+  port_map: '9001'
+  scheme: http
+  title:
+    en_US: Silo
+  tagline:
+    en_US: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.'
+  description:
+    en_US: 'MinIO, still maintained: PGSTY''s fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Silo/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Pigsty
+  architectures:
+  - amd64
+  - arm64
+  version: 2026.10.15
+  tips:
+    before_install:
+      en_US: Starts with MINIO_ROOT_USER as admin and MINIO_ROOT_PASSWORD as casaos. Change them under Custom Installation before you store real data.
+  repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md
+  support: https://github.com/junkerderprovinz/unraid-apps/issues

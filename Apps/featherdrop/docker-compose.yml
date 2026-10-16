@@ -1,0 +1,41 @@
+name: featherdrop
+services:
+  featherdrop:
+    image: junkerderprovinz/featherdrop:latest
+    container_name: featherdrop
+    restart: unless-stopped
+    ports:
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID/data:/data
+    - /DATA/AppData/$AppID/config:/config
+    environment:
+      CONFIG_DIR: /config
+      DEFAULT_EXPIRY: 7d
+      MAX_FILE_SIZE: '0'
+      MAX_EXPIRY: never
+      STORAGE_QUOTA: '0'
+      RATE_LIMIT: 'true'
+      TRUST_PROXY: 'false'
+x-casaos:
+  id: com.junkerderprovinz.featherdrop
+  main: featherdrop
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: featherdrop
+  tagline:
+    en_US: 'Your own private WeTransfer: feather-light, login-free, end-to-end encrypted file sharing with self-expiring share links.'
+  description:
+    en_US: featherdrop is a lightweight self-hosted file sharer, a private WeTransfer without accounts or size paywalls. Open the page, drop a file, set an expiry (plus an optional password or download limit), and share a short link or QR code. Files are end-to-end encrypted in your browser before upload, so the server only stores ciphertext and never sees your files, their names or the key. Uploads are resumable (tus), files sit on a local volume and the metadata lives in a single SQLite file, so there is no separate database, no account system and no tracking. The UI comes in 26 languages with light and dark mode, and you can brand it with APP_NAME, APP_LOGO and ACCENT_COLOR. Put it behind a reverse proxy and set BASE_URL so share links use your public domain.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/featherdrop/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 6.1.0
+  repo: https://github.com/junkerderprovinz/featherdrop
+  support: https://github.com/junkerderprovinz/featherdrop/issues

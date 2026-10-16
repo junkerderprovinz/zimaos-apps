@@ -1,0 +1,51 @@
+name: opencloud
+services:
+  opencloud:
+    image: junkerderprovinz/opencloud:rolling
+    container_name: opencloud
+    restart: unless-stopped
+    ports:
+    - 9200:9200
+    volumes:
+    - /DATA/AppData/$AppID/config:/etc/opencloud
+    - /DATA/AppData/$AppID/data:/var/lib/opencloud
+    environment:
+      IDM_ADMIN_PASSWORD: casaos
+      OC_URL: https://YOUR-SERVER-IP:9200
+      OC_INSECURE: 'true'
+      OC_LOG_LEVEL: info
+      IDM_CREATE_DEMO_USERS: 'false'
+      PROXY_TLS: 'true'
+      PROXY_ENABLE_APP_AUTH: 'false'
+      BRANDING_APP: 'false'
+      PUID: $PUID
+      PGID: $PGID
+      STORAGE_USERS_DRIVER: posix
+      STORAGE_USERS_DECOMPOSEDS3_REGION: default
+      OFFICE: 'off'
+      FULLTEXT_SEARCH: 'false'
+x-casaos:
+  id: com.junkerderprovinz.opencloud
+  main: opencloud
+  index: /
+  port_map: '9200'
+  scheme: https
+  title:
+    en_US: OpenCloud
+  tagline:
+    en_US: 'One-click OpenCloud file sync & share: auto-runs init, heals appdata permissions and honours PUID/PGID.'
+  description:
+    en_US: 'One-click OpenCloud file sync & share: auto-runs init, heals appdata permissions and honours PUID/PGID.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/OpenCloud/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: OpenCloud
+  architectures:
+  - amd64
+  - arm64
+  version: 1.4.2
+  tips:
+    before_install:
+      en_US: Set OC_URL under Custom Installation before the first start. Starts with IDM_ADMIN_PASSWORD as casaos. Change it under Custom Installation before you store real data.
+  repo: https://github.com/junkerderprovinz/opencloud
+  support: https://github.com/junkerderprovinz/opencloud/issues

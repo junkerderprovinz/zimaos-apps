@@ -1,0 +1,37 @@
+name: excalidraw
+services:
+  excalidraw:
+    image: junkerderprovinz/excalidraw:latest
+    container_name: excalidraw
+    restart: unless-stopped
+    ports:
+    - 8443:443
+    - 8080:80
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    environment:
+      ENABLE_LIBRARY: 'false'
+      ENABLE_AI: 'false'
+      TZ: $TZ
+x-casaos:
+  id: com.junkerderprovinz.excalidraw
+  main: excalidraw
+  index: /
+  port_map: '8443'
+  scheme: https
+  title:
+    en_US: Excalidraw
+  tagline:
+    en_US: 'The hand-drawn whiteboard, built so it keeps to itself: shared links, live collaboration, the session scene and even the fonts all come from your own server.'
+  description:
+    en_US: 'Excalidraw is a virtual whiteboard for sketches that look hand-drawn. This is a self-hosted build of it that keeps to itself: shared links, live collaboration, the session scene, the fonts and the icons all come from your own server, and the browser never contacts anyone else.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Excalidraw/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Excalidraw
+  architectures:
+  - amd64
+  - arm64
+  version: 1.0.0
+  repo: https://github.com/junkerderprovinz/excalidraw
+  support: https://github.com/junkerderprovinz/excalidraw/issues

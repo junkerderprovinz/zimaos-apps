@@ -1,0 +1,38 @@
+name: arrowloop
+services:
+  arrowloop:
+    image: junkerderprovinz/arrowloop:latest
+    container_name: arrowloop
+    restart: unless-stopped
+    hostname: arrowloop
+    ports:
+    - 8422:8422
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/data
+    environment:
+      TZ: $TZ
+      ARROWLOOP_ADDR: 0.0.0.0:8422
+      ARROWLOOP_UMASK: '000'
+x-casaos:
+  id: com.junkerderprovinz.arrowloop
+  main: arrowloop
+  index: /
+  port_map: '8422'
+  scheme: http
+  title:
+    en_US: ArrowLoop
+  tagline:
+    en_US: Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.
+  description:
+    en_US: Sync your files everywhere. See the plan before anything moves.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/ArrowLoop/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: Junker der Provinz
+  architectures:
+  - amd64
+  - arm64
+  version: 2.2.1
+  repo: https://github.com/junkerderprovinz/arrowloop
+  support: https://github.com/junkerderprovinz/arrowloop/issues
