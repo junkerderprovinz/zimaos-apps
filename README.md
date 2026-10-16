@@ -23,6 +23,7 @@ A community app store for <a href="https://github.com/IceWhaleTech/ZimaOS">ZimaO
 
 *My own software, built and published by junkerderprovinz. Full docs live in each app's own repository.*
 
+<a id="arrowloop"></a>
 <img src=".github/readme-icons/arrowloop.png" width="84" align="left" alt="ArrowLoop">
 <a href="https://github.com/junkerderprovinz/arrowloop#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/arrowloop/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -32,6 +33,7 @@ Two-way file sync that shows you the plan before it touches a file, sends deleti
 
 <br clear="all">
 
+<a id="bombvault"></a>
 <img src=".github/readme-icons/bombvault.png" width="84" align="left" alt="BombVault">
 <a href="https://github.com/junkerderprovinz/bombvault#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/bombvault/blob/main/deploy/docker-compose.generic.yml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -41,6 +43,7 @@ Backup and full disaster recovery for containers, VMs and the flash, powered by 
 
 <br clear="all">
 
+<a id="featherdrop"></a>
 <img src=".github/readme-icons/featherdrop.png" width="84" align="left" alt="featherdrop">
 <a href="https://github.com/junkerderprovinz/featherdrop#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/featherdrop/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -50,6 +53,7 @@ Your own private WeTransfer: feather-light, login-free, end-to-end encrypted fil
 
 <br clear="all">
 
+<a id="knightloader"></a>
 <img src=".github/readme-icons/knightloader.png" width="84" align="left" alt="KnightLoader">
 <a href="https://github.com/junkerderprovinz/knightloader#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/knightloader/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -59,6 +63,7 @@ Self-hosted download manager for hosters, debrid, torrents, Usenet and video, wi
 
 <br clear="all">
 
+<a id="trickwork"></a>
 <img src=".github/readme-icons/trickwork.png" width="84" align="left" alt="TrickWork">
 <a href="https://github.com/junkerderprovinz/trickwork#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/trickwork/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -73,6 +78,7 @@ Turns images into proportional-font-aware ASCII art - a rebuild of ASCII Gen 2, 
 
 *My own custom image builds of third-party apps. Full docs in each app's own repository.*
 
+<a id="euro-office"></a>
 <img src=".github/readme-icons/euro-office.png" width="84" align="left" alt="Euro Office">
 <a href="https://github.com/junkerderprovinz/euro-office#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/euro-office/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -82,6 +88,7 @@ Sovereign, OnlyOffice-compatible document server for browser editing of Office a
 
 <br clear="all">
 
+<a id="excalidraw"></a>
 <img src=".github/readme-icons/excalidraw.png" width="84" align="left" alt="Excalidraw">
 <a href="https://github.com/junkerderprovinz/excalidraw#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/excalidraw/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -91,6 +98,7 @@ The hand-drawn whiteboard, built so it keeps to itself: shared links, live colla
 
 <br clear="all">
 
+<a id="garage"></a>
 <img src=".github/readme-icons/garage.png" width="84" align="left" alt="Garage">
 <a href="https://github.com/junkerderprovinz/garage#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/garage/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -100,6 +108,7 @@ Garage's S3-compatible object store and its web admin panel in one container, wi
 
 <br clear="all">
 
+<a id="handbrake"></a>
 <img src=".github/readme-icons/handbrake.png" width="84" align="left" alt="HandBrake">
 <a href="https://github.com/junkerderprovinz/handbrake#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/handbrake/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -109,6 +118,7 @@ HandBrake's full GUI on a fast Selkies web desktop, GPU-accelerated on NVIDIA, I
 
 <br clear="all">
 
+<a id="jdownloader"></a>
 <img src=".github/readme-icons/jdownloader.png" width="84" align="left" alt="JDownloader">
 <a href="https://github.com/junkerderprovinz/jdownloader#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/jdownloader/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -118,6 +128,7 @@ JDownloader 2 with a complete, sleek dark UI out of the box, on a fast Selkies w
 
 <br clear="all">
 
+<a id="krusader"></a>
 <img src=".github/readme-icons/krusader.png" width="84" align="left" alt="Krusader">
 <a href="https://github.com/junkerderprovinz/krusader#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/krusader/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -127,6 +138,7 @@ Twin-pane KDE file manager with a native dark theme on a fast Selkies web deskto
 
 <br clear="all">
 
+<a id="opencloud"></a>
 <img src=".github/readme-icons/opencloud.png" width="84" align="left" alt="OpenCloud">
 <a href="https://github.com/junkerderprovinz/opencloud#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/opencloud/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -136,6 +148,7 @@ One-click OpenCloud file sync &amp; share: auto-runs init, heals appdata permiss
 
 <br clear="all">
 
+<a id="prusaslicer"></a>
 <img src=".github/readme-icons/prusaslicer.png" width="84" align="left" alt="PrusaSlicer">
 <a href="https://github.com/junkerderprovinz/prusaslicer#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/prusaslicer/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -145,6 +158,7 @@ The PrusaSlicer 3D-printing slicer in your browser on a fast Selkies web desktop
 
 <br clear="all">
 
+<a id="seafile"></a>
 <img src=".github/readme-icons/seafile.png" width="84" align="left" alt="Seafile">
 <a href="https://github.com/junkerderprovinz/seafile#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/seafile/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -154,6 +168,7 @@ The official Seafile server from one template, with its secrets generated on fir
 
 <br clear="all">
 
+<a id="securo"></a>
 <img src=".github/readme-icons/securo.png" width="84" align="left" alt="Securo">
 <a href="https://github.com/junkerderprovinz/securo#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/securo/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -163,6 +178,7 @@ The Securo finance manager with its worker and scheduler in one container, on yo
 
 <br clear="all">
 
+<a id="stellarium"></a>
 <img src=".github/readme-icons/stellarium.png" width="84" align="left" alt="Stellarium">
 <a href="https://github.com/junkerderprovinz/stellarium#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/stellarium/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -177,6 +193,7 @@ The Stellarium planetarium in your browser on a fast Selkies web desktop: pan th
 
 *Thin templates over a third-party upstream image (no custom build). Full docs in each app's folder below.*
 
+<a id="couchdb"></a>
 <img src=".github/readme-icons/couchdb.png" width="84" align="left" alt="CouchDB">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -186,6 +203,7 @@ The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x im
 
 <br clear="all">
 
+<a id="rustfs"></a>
 <img src=".github/readme-icons/rustfs.png" width="84" align="left" alt="RustFS">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -195,6 +213,7 @@ An S3 object store in Rust, with the two fixes it needs to run on Unraid at all.
 
 <br clear="all">
 
+<a id="seaweedfs"></a>
 <img src=".github/readme-icons/seaweedfs.png" width="84" align="left" alt="SeaweedFS">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -204,6 +223,7 @@ Fast, S3-API-compatible object store on the official image, the actively-maintai
 
 <br clear="all">
 
+<a id="silo"></a>
 <img src=".github/readme-icons/silo.png" width="84" align="left" alt="Silo">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -213,6 +233,7 @@ MinIO, still maintained: PGSTY's fork of the open-source server, with the full w
 
 <br clear="all">
 
+<a id="standardnotes-webui"></a>
 <img src=".github/readme-icons/standardnotes-webui.png" width="84" align="left" alt="Standard Notes Web UI">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
@@ -222,6 +243,7 @@ The official Standard Notes web client, self-hosted next to your own sync server
 
 <br clear="all">
 
+<a id="versitygw"></a>
 <img src=".github/readme-icons/versitygw.png" width="84" align="left" alt="VersityGW">
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/versitygw/README.md"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
 <a href="https://github.com/junkerderprovinz/unraid-apps/blob/main/versitygw/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
