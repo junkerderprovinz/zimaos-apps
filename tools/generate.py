@@ -198,7 +198,8 @@ def build(feed, gen_compose, app, overrides):
             env[key] = value
     defaulted = []
     for key in required:
-        default = next((value for pattern, value in CREDENTIALS if pattern.search(key)), None)
+        default = overrides.get("env", {}).get(key) or next(
+            (value for pattern, value in CREDENTIALS if pattern.search(key)), None)
         if default and not env.get(key):
             env[key] = default
             defaulted.append(key)
@@ -250,7 +251,9 @@ def build(feed, gen_compose, app, overrides):
     if repo:
         meta["repo"] = readme if wrapper else repo.group(0)
         meta["support"] = repo.group(0) + "/issues"
-    doc = {"name": app, **doc, "x-casaos": meta}
+    # CasaOS keys its catalog by this name across all stores, so a name the
+    # official store also uses would hide its app.
+    doc = {"name": overrides.get("name", app), **doc, "x-casaos": meta}
     return name, yaml.safe_dump(doc, sort_keys=False, allow_unicode=True, width=1000)
 
 

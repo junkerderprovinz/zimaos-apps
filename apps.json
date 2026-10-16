@@ -12,6 +12,7 @@
     "developer": "Euro-Office"
   },
   "excalidraw": {
+    "name": "excalidraw-jdp",
     "category": "Productivity",
     "developer": "Excalidraw"
   },
@@ -23,6 +24,7 @@
     "developer": "Deuxfleurs"
   },
   "handbrake": {
+    "name": "handbrake-jdp",
     "category": "Media",
     "developer": "HandBrake",
     "paths": {"/watch": "/DATA/Media/HandBrake/watch", "/output": "/DATA/Media/HandBrake/output", "/storage": "/DATA"}
@@ -71,7 +73,8 @@
   },
   "silo": {
     "category": "Others",
-    "developer": "Pigsty"
+    "developer": "Pigsty",
+    "env": {"MINIO_ROOT_PASSWORD": "casaos1234"}
   },
   "standardnotes-webui": {
     "category": "Productivity",

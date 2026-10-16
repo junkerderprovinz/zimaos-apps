@@ -1,4 +1,4 @@
-name: excalidraw
+name: excalidraw-jdp
 services:
   excalidraw:
     image: junkerderprovinz/excalidraw:latest

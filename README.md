@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-A community app store for <a href="https://github.com/IceWhaleTech/ZimaOS">ZimaOS</a> with junkerderprovinz's containers, grouped like the profile: <b>Apps</b> (my own software), <b>Images</b> (my own image builds of third-party apps) and <b>Wrappers</b> (thin templates over an upstream image). One store to add; each app's image and full source live in its own repository.
+A community app store for <a href="https://github.com/IceWhaleTech/ZimaOS">ZimaOS</a> and <a href="https://github.com/IceWhaleTech/CasaOS">CasaOS</a> with junkerderprovinz's containers, grouped like the profile: <b>Apps</b> (my own software), <b>Images</b> (my own image builds of third-party apps) and <b>Wrappers</b> (thin templates over an upstream image). One store to add; each app's image and full source live in its own repository.
 </p>
 
 
@@ -234,6 +234,14 @@ https://junkerderprovinz.github.io/zimaos-apps/store.json
 
 The apps then show up under **Junker der Provinz** in the store's sidebar.
 
+On CasaOS: open the **App Store**, click the number of apps at the top right of the list, choose **More apps** and add
+
+```
+https://github.com/junkerderprovinz/zimaos-apps/archive/refs/heads/main.zip
+```
+
+The apps then appear in the App Store next to the others.
+
 Seafile and OpenCloud need the address they are reached at before their first start. Fill it in under **Custom Installation**; their page says which field under **Tips**. Apps that need a login or a key of their own (CouchDB, Euro-Office, OpenCloud, RustFS, Silo, VersityGW) start with `admin` and `casaos`, the login ZimaOS itself starts with. Change it under **Custom Installation** before you store real data.
 
 Questions and bugs go to the issue tracker of the app's own repository; every app links it under **Get Support**.
@@ -255,7 +263,7 @@ To change an app, edit its template in unraid-apps, not the files in `Apps/`, `.
 python3 tools/generate.py ../unraid-apps
 ```
 
-`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`), name the upstream developer (`developer`) or replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid.
+`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`), name the upstream developer (`developer`), replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid, give a starting value an app needs in another form (`env`, Silo wants eight characters) or pick another internal name (`name`). CasaOS keys its catalog by that name across all stores, so Excalidraw and HandBrake use `excalidraw-jdp` and `handbrake-jdp` to sit next to the official ones instead of hiding them.
 
 
 ## How AI is used here

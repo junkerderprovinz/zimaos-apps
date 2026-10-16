@@ -1,4 +1,4 @@
-name: handbrake
+name: handbrake-jdp
 services:
   handbrake:
     image: junkerderprovinz/handbrake:latest

@@ -11,7 +11,7 @@ services:
     - /DATA/AppData/$AppID/data:/data
     environment:
       MINIO_ROOT_USER: admin
-      MINIO_ROOT_PASSWORD: casaos
+      MINIO_ROOT_PASSWORD: casaos1234
     command: server /data --console-address ":9001"
 x-casaos:
   id: com.junkerderprovinz.silo
@@ -35,6 +35,6 @@ x-casaos:
   version: 2026.10.15
   tips:
     before_install:
-      en_US: Starts with MINIO_ROOT_USER as admin and MINIO_ROOT_PASSWORD as casaos. Change them under Custom Installation before you store real data.
+      en_US: Starts with MINIO_ROOT_USER as admin and MINIO_ROOT_PASSWORD as casaos1234. Change them under Custom Installation before you store real data.
   repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md
   support: https://github.com/junkerderprovinz/unraid-apps/issues
