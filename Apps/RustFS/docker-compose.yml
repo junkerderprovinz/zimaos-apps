@@ -34,7 +34,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.0.2
+  version: 1.0.3
   tips:
     before_install:
       en_US: Starts with RUSTFS_ACCESS_KEY as admin and RUSTFS_SECRET_KEY as casaos. Change them under Custom Installation before you store real data.
