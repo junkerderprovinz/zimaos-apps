@@ -42,7 +42,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 10.1.5
+  version: 10.1.6
   tips:
     before_install:
       en_US: 'Set APP_KEY under Custom Installation before the first start. APP_KEY takes 64 lowercase hex characters, for example from openssl rand -hex 32. Keep it safe: without it the encrypted backups cannot be restored.'

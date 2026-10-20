@@ -34,6 +34,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.0.1
+  version: 1.0.2
   repo: https://github.com/junkerderprovinz/garage
   support: https://github.com/junkerderprovinz/garage/issues
