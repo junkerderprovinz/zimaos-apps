@@ -42,7 +42,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.9.0
+  version: 1.10.0
   tips:
     before_install:
       en_US: Starts with ROOT_ACCESS_KEY as admin and ROOT_SECRET_KEY as casaos. Change them under Custom Installation before you store real data.
