@@ -1,0 +1,40 @@
+name: soundcraft
+services:
+  soundcraft:
+    image: junkerderprovinz/soundcraft:latest
+    container_name: soundcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.soundcraft
+  main: soundcraft
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: SoundCraft
+  tagline:
+    en_US: SoundCraft on a Selkies web desktop, a multitrack audio workstation whose sound plays in the browser.
+  description:
+    en_US: SoundCraft, multitrack audio recording and mixing in the spirit of Pro Tools, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/SoundCraft/icon.png
+  category: Media
+  author: Junker der Provinz
+  developer: ArtCraft team
+  architectures:
+  - amd64
+  - arm64
+  version: 1.1.0
+  repo: https://github.com/junkerderprovinz/artcraft-apps
+  support: https://github.com/junkerderprovinz/artcraft-apps/issues

@@ -1,0 +1,40 @@
+name: filmcraft
+services:
+  filmcraft:
+    image: junkerderprovinz/filmcraft:latest
+    container_name: filmcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.filmcraft
+  main: filmcraft
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: FilmCraft
+  tagline:
+    en_US: FilmCraft on a Selkies web desktop, a nonlinear video editor that cuts the footage on your array from any browser.
+  description:
+    en_US: FilmCraft, a nonlinear video editor in the spirit of Premiere Pro, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/FilmCraft/icon.png
+  category: Media
+  author: Junker der Provinz
+  developer: ArtCraft team
+  architectures:
+  - amd64
+  - arm64
+  version: 1.1.0
+  repo: https://github.com/junkerderprovinz/artcraft-apps
+  support: https://github.com/junkerderprovinz/artcraft-apps/issues

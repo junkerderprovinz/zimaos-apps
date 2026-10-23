@@ -1,0 +1,40 @@
+name: cadcraft
+services:
+  cadcraft:
+    image: junkerderprovinz/cadcraft:latest
+    container_name: cadcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.cadcraft
+  main: cadcraft
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: CADCraft
+  tagline:
+    en_US: 'CADCraft on a Selkies web desktop: 2D drafting with layers, blocks and dimensions, and DXF and DWG files, all in the browser.'
+  description:
+    en_US: CADCraft, 2D drafting and DXF/DWG drawings in the spirit of AutoCAD, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/CADCraft/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: ArtCraft team
+  architectures:
+  - amd64
+  - arm64
+  version: 1.1.0
+  repo: https://github.com/junkerderprovinz/artcraft-apps
+  support: https://github.com/junkerderprovinz/artcraft-apps/issues

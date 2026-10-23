@@ -1,0 +1,40 @@
+name: figcraft
+services:
+  figcraft:
+    image: junkerderprovinz/figcraft:latest
+    container_name: figcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+    - 3001:3001
+    - 3000:3000
+    volumes:
+    - /DATA/AppData/$AppID:/config
+    - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.figcraft
+  main: figcraft
+  index: /
+  port_map: '3001'
+  scheme: https
+  title:
+    en_US: FigCraft
+  tagline:
+    en_US: 'FigCraft on a Selkies web desktop: design interfaces with frames and components and click through prototypes in the browser.'
+  description:
+    en_US: FigCraft, interface design and prototyping in the spirit of Figma, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/FigCraft/icon.png
+  category: Productivity
+  author: Junker der Provinz
+  developer: ArtCraft team
+  architectures:
+  - amd64
+  - arm64
+  version: 1.1.0
+  repo: https://github.com/junkerderprovinz/artcraft-apps
+  support: https://github.com/junkerderprovinz/artcraft-apps/issues

@@ -12,9 +12,29 @@
     "tagline": "Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.",
     "tip": "APP_KEY takes 64 lowercase hex characters, for example from openssl rand -hex 32. Keep it safe: without it the encrypted backups cannot be restored."
   },
+  "cadcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
   "couchdb": {
     "category": "Developer",
     "developer": "Apache Software Foundation"
+  },
+  "deckcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
+  "designcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
+  "effectcraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
   },
   "euro-office": {
     "category": "Productivity",
@@ -28,9 +48,24 @@
   "featherdrop": {
     "category": "Productivity"
   },
+  "figcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
+  "filmcraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
   "garage": {
     "category": "Others",
     "developer": "Deuxfleurs"
+  },
+  "gridcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
   },
   "handbrake": {
     "name": "handbrake-jdp",
@@ -52,9 +87,24 @@
     "developer": "KDE",
     "paths": {"/storage": "/DATA"}
   },
+  "lightcraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
   "opencloud": {
     "category": "Productivity",
     "developer": "OpenCloud"
+  },
+  "pdfcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
+  "photocraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
   },
   "prusaslicer": {
     "category": "Others",
@@ -85,6 +135,11 @@
     "developer": "Pigsty",
     "env": {"MINIO_ROOT_PASSWORD": "casaos1234"}
   },
+  "soundcraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
   "standardnotes-webui": {
     "category": "Productivity",
     "developer": "Standard Notes"
@@ -96,8 +151,18 @@
   "trickwork": {
     "category": "Media"
   },
+  "vectorcraft": {
+    "category": "Media",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
+  },
   "versitygw": {
     "category": "Others",
     "developer": "Versity"
+  },
+  "wordcraft": {
+    "category": "Productivity",
+    "developer": "ArtCraft team",
+    "paths": {"/storage": "/DATA"}
   }
 }
