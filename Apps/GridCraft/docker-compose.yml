@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     shm_size: 1gb
     ports:
-    - 3001:3001
-    - 3000:3000
+    - 32061:3001
+    - 32060:3000
     volumes:
     - /DATA/AppData/$AppID:/config
     - /DATA:/storage
@@ -20,7 +20,7 @@ x-casaos:
   id: com.junkerderprovinz.gridcraft
   main: gridcraft
   index: /
-  port_map: '3001'
+  port_map: '32061'
   scheme: https
   title:
     en_US: GridCraft

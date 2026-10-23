@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     shm_size: 1gb
     ports:
-    - 3001:3001
-    - 3000:3000
+    - 32071:3001
+    - 32070:3000
     volumes:
     - /DATA/AppData/$AppID:/config
     - /DATA:/storage:ro
@@ -41,7 +41,7 @@ x-casaos:
   id: com.junkerderprovinz.handbrake
   main: handbrake
   index: /
-  port_map: '3001'
+  port_map: '32071'
   scheme: https
   title:
     en_US: HandBrake

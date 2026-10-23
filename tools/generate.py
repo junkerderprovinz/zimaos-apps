@@ -182,6 +182,11 @@ def data_path(volume, overrides):
     return ":".join([host, target, *mode])
 
 
+def host_port(mapping, ports):
+    host, target = mapping.split(":", 1)
+    return f"{ports.get(target.split('/')[0], host)}:{target}"
+
+
 def build(feed, gen_compose, app, overrides):
     xml = overrides.get("xml", f"{app}.xml")
     root = ET.parse(feed / app / xml).getroot()
@@ -189,6 +194,10 @@ def build(feed, gen_compose, app, overrides):
     required = re.findall(r"^\s+(\w+):.*# required$", text, re.M)
     doc = yaml.safe_load(text)
     service = doc["services"][app]
+    # Every Selkies desktop listens on 3000 and 3001, and ZimaOS refuses a
+    # second app on a host port that is taken, so each gets its own pair.
+    if "ports" in overrides:
+        service["ports"] = [host_port(p, overrides["ports"]) for p in service["ports"]]
 
     drop = overrides.get("drop_paths", [])
     service["volumes"] = [data_path(v, overrides) for v in service.get("volumes", []) if v.split(":")[1] not in drop]

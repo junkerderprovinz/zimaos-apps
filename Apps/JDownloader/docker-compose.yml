@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     shm_size: 1gb
     ports:
-    - 3000:3000
-    - 3001:3001
+    - 32080:3000
+    - 32081:3001
     volumes:
     - /DATA/AppData/$AppID:/config
     - /DATA/Downloads:/downloads
@@ -24,7 +24,7 @@ x-casaos:
   id: com.junkerderprovinz.jdownloader
   main: jdownloader
   index: /
-  port_map: '3001'
+  port_map: '32081'
   scheme: https
   title:
     en_US: JDownloader

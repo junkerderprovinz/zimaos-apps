@@ -15,7 +15,8 @@
   "cadcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32000, "3001": 32001}
   },
   "couchdb": {
     "category": "Developer",
@@ -24,17 +25,20 @@
   "deckcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32010, "3001": 32011}
   },
   "designcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32020, "3001": 32021}
   },
   "effectcraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32030, "3001": 32031}
   },
   "euro-office": {
     "category": "Productivity",
@@ -51,12 +55,14 @@
   "figcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32040, "3001": 32041}
   },
   "filmcraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32050, "3001": 32051}
   },
   "garage": {
     "category": "Others",
@@ -65,18 +71,21 @@
   "gridcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32060, "3001": 32061}
   },
   "handbrake": {
     "name": "handbrake-jdp",
     "category": "Media",
     "developer": "HandBrake",
-    "paths": {"/watch": "/DATA/Media/HandBrake/watch", "/output": "/DATA/Media/HandBrake/output", "/storage": "/DATA"}
+    "paths": {"/watch": "/DATA/Media/HandBrake/watch", "/output": "/DATA/Media/HandBrake/output", "/storage": "/DATA"},
+    "ports": {"3000": 32070, "3001": 32071}
   },
   "jdownloader": {
     "category": "Media",
     "developer": "AppWork",
-    "paths": {"/downloads": "/DATA/Downloads"}
+    "paths": {"/downloads": "/DATA/Downloads"},
+    "ports": {"3000": 32080, "3001": 32081}
   },
   "knightloader": {
     "category": "Media",
@@ -85,12 +94,14 @@
   "krusader": {
     "category": "Productivity",
     "developer": "KDE",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32090, "3001": 32091}
   },
   "lightcraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32100, "3001": 32101}
   },
   "opencloud": {
     "category": "Productivity",
@@ -99,17 +110,20 @@
   "pdfcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32110, "3001": 32111}
   },
   "photocraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32120, "3001": 32121}
   },
   "prusaslicer": {
     "category": "Others",
     "developer": "Prusa Research",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32130, "3001": 32131}
   },
   "rustfs": {
     "category": "Others",
@@ -138,7 +152,8 @@
   "soundcraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32140, "3001": 32141}
   },
   "standardnotes-webui": {
     "category": "Productivity",
@@ -146,7 +161,8 @@
   },
   "stellarium": {
     "category": "Others",
-    "developer": "Stellarium"
+    "developer": "Stellarium",
+    "ports": {"3000": 32150, "3001": 32151}
   },
   "trickwork": {
     "category": "Media"
@@ -154,7 +170,8 @@
   "vectorcraft": {
     "category": "Media",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32160, "3001": 32161}
   },
   "versitygw": {
     "category": "Others",
@@ -163,6 +180,7 @@
   "wordcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
-    "paths": {"/storage": "/DATA"}
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32170, "3001": 32171}
   }
 }
