@@ -1,0 +1,28 @@
+name: designcraft
+services:
+  designcraft:
+    image: junkerderprovinz/designcraft:latest@sha256:8b1e2a43d0c3f28c23bdef9b76c0c63fd8b3ee752b1273ad3175b4c8e6cb5491
+    container_name: designcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32021:3001
+      - 32020:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.designcraft
+  main: designcraft
+  index: /
+  port_map: '32021'
+  scheme: https
+  title:
+    en_US: DesignCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.designcraft/assets/icon.png
+  version: 1.1.0

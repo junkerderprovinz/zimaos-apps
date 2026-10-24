@@ -1,0 +1,35 @@
+name: versitygw
+services:
+  versitygw:
+    image: versity/versitygw:latest@sha256:2df780de109d16491cb99c25f4c0bc9085b286e77b5b47b56121b340094e70bb
+    container_name: versitygw
+    restart: unless-stopped
+    ports:
+      - 7070:7070
+      - 7071:7071
+      - 7080:7080
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+      - /DATA/AppData/$AppID:/config
+    environment:
+      VGW_BACKEND: posix
+      VGW_BACKEND_ARG: /data
+      ROOT_ACCESS_KEY: admin
+      ROOT_SECRET_KEY: casaos
+      VGW_PORT: :7070
+      VGW_WEBUI_PORT: :7071
+      VGW_ADMIN_PORT: :7080
+      VGW_WEBUI_NO_TLS: 'true'
+      VGW_IAM_DIR: /config
+      VGW_REGION: us-east-1
+      VGW_HEALTH: /_health
+x-casaos:
+  id: com.junkerderprovinz.versitygw
+  main: versitygw
+  index: /
+  port_map: '7071'
+  scheme: http
+  title:
+    en_US: VersityGW
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.versitygw/assets/icon.png
+  version: 1.10.0

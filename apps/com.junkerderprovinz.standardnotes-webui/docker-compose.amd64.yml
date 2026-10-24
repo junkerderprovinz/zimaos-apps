@@ -1,0 +1,18 @@
+name: standardnotes-webui
+services:
+  standardnotes-webui:
+    image: standardnotes/web:latest@sha256:23b2ab15482a3d9fe6d3059fe148e0523d4661131f1551790fc3342e5cbe7587
+    container_name: standardnotes-webui
+    restart: unless-stopped
+    ports:
+      - 3001:80
+x-casaos:
+  id: com.junkerderprovinz.standardnotes-webui
+  main: standardnotes-webui
+  index: /
+  port_map: '3001'
+  scheme: http
+  title:
+    en_US: StandardNotes-WebUI
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.standardnotes-webui/assets/icon.png
+  version: 2026.10.23

@@ -1,0 +1,25 @@
+{
+  "tagline": "JDownloader 2 with a complete, sleek dark UI out of the box, on a fast Selkies web desktop in your browser. No VNC client, no install.",
+  "description": "JDownloader 2 with a dark mode GUI and full clipboard support out of the box. The download list, link grabber and settings are all dark, and everything runs on a hardware-accelerated Selkies web desktop. It looks like this from the first start, without tweaking or add-ons.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "AppWork",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/jdownloader",
+  "support": "https://github.com/junkerderprovinz/jdownloader/issues",
+  "title": "JDownloader",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.jdownloader",
+  "version": "4.8.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1198439170,
+    "arm64": 1150613718
+  }
+}

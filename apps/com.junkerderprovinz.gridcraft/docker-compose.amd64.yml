@@ -1,0 +1,28 @@
+name: gridcraft
+services:
+  gridcraft:
+    image: junkerderprovinz/gridcraft:latest@sha256:8760064a5fc196136beb7e89f097b478e43991e98efb3b908b064dc6a4c38c6a
+    container_name: gridcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32061:3001
+      - 32060:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.gridcraft
+  main: gridcraft
+  index: /
+  port_map: '32061'
+  scheme: https
+  title:
+    en_US: GridCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.gridcraft/assets/icon.png
+  version: 1.1.0

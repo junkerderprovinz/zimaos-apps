@@ -1,0 +1,25 @@
+name: excalidraw-jdp
+services:
+  excalidraw:
+    image: junkerderprovinz/excalidraw:latest
+    container_name: excalidraw
+    restart: unless-stopped
+    ports:
+      - 8443:443
+      - 8080:80
+    volumes:
+      - /DATA/AppData/$AppID:/config
+    environment:
+      ENABLE_LIBRARY: 'false'
+      ENABLE_AI: 'false'
+      TZ: $TZ
+x-casaos:
+  id: com.junkerderprovinz.excalidraw
+  main: excalidraw
+  index: /
+  port_map: '8443'
+  scheme: https
+  title:
+    en_US: Excalidraw
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.excalidraw/assets/icon.png
+  version: 1.0.0

@@ -1,0 +1,28 @@
+name: prusaslicer
+services:
+  prusaslicer:
+    image: junkerderprovinz/prusaslicer:latest@sha256:7712b6a7db8400044b8d2a96a0053ac660567e0a137d0f63cdd440e515fa5534
+    container_name: prusaslicer
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32131:3001
+      - 32130:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.prusaslicer
+  main: prusaslicer
+  index: /
+  port_map: '32131'
+  scheme: https
+  title:
+    en_US: PrusaSlicer
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.prusaslicer/assets/icon.png
+  version: 1.2.0

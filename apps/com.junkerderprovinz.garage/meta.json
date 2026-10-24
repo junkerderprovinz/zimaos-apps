@@ -1,0 +1,25 @@
+{
+  "tagline": "Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.",
+  "description": "Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Deuxfleurs",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/garage",
+  "support": "https://github.com/junkerderprovinz/garage/issues",
+  "title": "Garage",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.garage",
+  "version": "1.0.2",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 69167072,
+    "arm64": 68422101
+  }
+}

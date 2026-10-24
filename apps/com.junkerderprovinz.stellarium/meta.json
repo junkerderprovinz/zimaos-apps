@@ -1,0 +1,25 @@
+{
+  "tagline": "The Stellarium planetarium in your browser on a fast Selkies web desktop: pan the sky, zoom a nebula, scrub through time, no VNC client.",
+  "description": "Stellarium, the free, open-source desktop planetarium, on a Selkies web desktop. Explore a photorealistic real-time sky in your browser: no VNC client, no local install. There is no maintained browser-desktop build of the actual Stellarium application (\"Stellarium Web\" is a separate, much lighter reimplementation), so this fills a genuine gap: a modern Selkies (WebRTC) build of the real thing for amd64 and arm64.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Stellarium",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/stellarium",
+  "support": "https://github.com/junkerderprovinz/stellarium/issues",
+  "title": "Stellarium",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.stellarium",
+  "version": "1.2.0",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1386486962,
+    "arm64": 1338587349
+  }
+}

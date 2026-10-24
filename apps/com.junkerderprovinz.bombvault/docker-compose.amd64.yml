@@ -1,0 +1,35 @@
+name: bombvault
+services:
+  bombvault:
+    image: junkerderprovinz/bombvault:latest@sha256:c7a56dc29eb72bba6b2660533259796e8d9356884059ca761294203a2691e3c0
+    container_name: bombvault
+    restart: unless-stopped
+    hostname: bombvault
+    ports:
+      - 3443:3443
+      - 3000:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/host/user
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      HTTP_ONLY: 'false'
+      APP_KEY: ''
+      HOST_SOURCE_ROOT: /DATA
+      LIBVIRT_HOST: 192.168.x.x
+      LIBVIRT_SSH_PORT: '22'
+      LIBVIRT_SSH_USER: root
+      PLATFORM: generic
+      DATA_ROOT_SEGMENTS: AppData
+    extra_hosts:
+      - host.docker.internal:host-gateway
+x-casaos:
+  id: com.junkerderprovinz.bombvault
+  main: bombvault
+  index: /
+  port_map: '3443'
+  scheme: https
+  title:
+    en_US: BombVault
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.bombvault/assets/icon.png
+  version: 10.3.0

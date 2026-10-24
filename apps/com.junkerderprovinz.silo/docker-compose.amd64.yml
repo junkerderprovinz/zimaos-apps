@@ -1,0 +1,25 @@
+name: silo
+services:
+  silo:
+    image: pgsty/silo:latest@sha256:706e0d419d23bdab663486044165fb4de1ee6b82885a8637b2935216fb2286ec
+    container_name: silo
+    restart: unless-stopped
+    ports:
+      - 9000:9000
+      - 9001:9001
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: casaos1234
+    command: server /data --console-address ":9001"
+x-casaos:
+  id: com.junkerderprovinz.silo
+  main: silo
+  index: /
+  port_map: '9001'
+  scheme: http
+  title:
+    en_US: Silo
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.silo/assets/icon.png
+  version: 2026.10.18

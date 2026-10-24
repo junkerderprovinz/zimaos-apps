@@ -1,0 +1,26 @@
+name: arrowloop
+services:
+  arrowloop:
+    image: junkerderprovinz/arrowloop:latest@sha256:5daa2ef92a3ca6478ec37ae466527e9800098ca96df685ee669757d84037e38c
+    container_name: arrowloop
+    restart: unless-stopped
+    hostname: arrowloop
+    ports:
+      - 8422:8422
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/data
+    environment:
+      TZ: $TZ
+      ARROWLOOP_ADDR: 0.0.0.0:8422
+      ARROWLOOP_UMASK: '000'
+x-casaos:
+  id: com.junkerderprovinz.arrowloop
+  main: arrowloop
+  index: /
+  port_map: '8422'
+  scheme: http
+  title:
+    en_US: ArrowLoop
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.arrowloop/assets/icon.png
+  version: 2.2.8

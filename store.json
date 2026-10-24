@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "store_id": "junkerderprovinz",
+  "name": "Junker der Provinz",
+  "description": "Self-hosted apps by Junker der Provinz: own images and tuned wrappers, built from the same templates as the Unraid apps.",
+  "maintainer": "Junker der Provinz",
+  "url": "https://github.com/junkerderprovinz/zimaos-apps"
+}

@@ -1,0 +1,25 @@
+{
+  "tagline": "Self-hosted download manager for hosters, debrid, torrents, Usenet and video, with an Android app and a browser extension.",
+  "description": "A download manager that downloads everything and kneels to nothing.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/knightloader",
+  "support": "https://github.com/junkerderprovinz/knightloader/issues",
+  "title": "KnightLoader",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.knightloader",
+  "version": "2.3.1",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 231961280,
+    "arm64": 226061162
+  }
+}

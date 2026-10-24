@@ -1,0 +1,36 @@
+name: opencloud
+services:
+  opencloud:
+    image: junkerderprovinz/opencloud:rolling
+    container_name: opencloud
+    restart: unless-stopped
+    ports:
+      - 9200:9200
+    volumes:
+      - /DATA/AppData/$AppID/config:/etc/opencloud
+      - /DATA/AppData/$AppID/data:/var/lib/opencloud
+    environment:
+      IDM_ADMIN_PASSWORD: casaos
+      OC_URL: https://YOUR-SERVER-IP:9200
+      OC_INSECURE: 'true'
+      OC_LOG_LEVEL: info
+      IDM_CREATE_DEMO_USERS: 'false'
+      PROXY_TLS: 'true'
+      PROXY_ENABLE_APP_AUTH: 'false'
+      BRANDING_APP: 'false'
+      PUID: $PUID
+      PGID: $PGID
+      STORAGE_USERS_DRIVER: posix
+      STORAGE_USERS_DECOMPOSEDS3_REGION: default
+      OFFICE: 'off'
+      FULLTEXT_SEARCH: 'false'
+x-casaos:
+  id: com.junkerderprovinz.opencloud
+  main: opencloud
+  index: /
+  port_map: '9200'
+  scheme: https
+  title:
+    en_US: OpenCloud
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.opencloud/assets/icon.png
+  version: 1.4.2

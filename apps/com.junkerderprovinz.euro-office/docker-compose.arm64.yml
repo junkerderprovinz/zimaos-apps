@@ -1,0 +1,28 @@
+name: euro-office
+services:
+  euro-office:
+    image: ghcr.io/junkerderprovinz/euro-office:latest@sha256:16a20b2118ab221e50a635e2f0c37dfc72bc313fc3589bfb3f43befdc06c48e5
+    container_name: euro-office
+    restart: unless-stopped
+    ports:
+      - 9900:80
+      - 9943:443
+    volumes:
+      - /DATA/AppData/$AppID/data:/var/www/euro-office/Data
+      - /DATA/AppData/$AppID/certs:/certs:ro
+    environment:
+      JWT_SECRET: casaos
+      WOPI_ENABLED: 'true'
+      JWT_ENABLED: 'true'
+      USE_UNAUTHORIZED_STORAGE: 'true'
+      ONLYOFFICE_HTTPS_HSTS_ENABLED: 'true'
+x-casaos:
+  id: com.junkerderprovinz.euro-office
+  main: euro-office
+  index: /
+  port_map: '9900'
+  scheme: http
+  title:
+    en_US: Euro-Office
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.euro-office/assets/icon.png
+  version: 1.2.1

@@ -1,0 +1,28 @@
+{
+  "tagline": "MinIO, still maintained: PGSTY's fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.",
+  "description": "MinIO, still maintained: PGSTY's fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Pigsty",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Starts with MINIO_ROOT_USER as admin and MINIO_ROOT_PASSWORD as casaos1234. Change them under Custom Installation before you store real data."
+  },
+  "repo": "https://github.com/junkerderprovinz/unraid-apps/blob/main/silo/README.md",
+  "support": "https://github.com/junkerderprovinz/unraid-apps/issues",
+  "title": "Silo",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.silo",
+  "version": "2026.10.18",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 56613205,
+    "arm64": 52107326
+  }
+}

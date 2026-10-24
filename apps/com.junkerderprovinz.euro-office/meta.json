@@ -1,0 +1,28 @@
+{
+  "tagline": "Sovereign, OnlyOffice-compatible document server for browser editing of Office and OpenDocument files, wired into OpenCloud over WOPI.",
+  "description": "Euro Office Document Server - a sovereign, European document server for browser-based editing of text documents, spreadsheets and presentations. It is a maintained fork of the OnlyOffice Document Server, so it speaks the same WOPI and OnlyOffice APIs and plugs straight into OpenCloud (and Nextcloud/ownCloud). Use it to edit .docx / .xlsx / .pptx and .odt / .ods / .odp files right in your browser, without any desktop office suite.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "Euro-Office",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Starts with JWT_SECRET as casaos. Change it under Custom Installation before you store real data."
+  },
+  "repo": "https://github.com/junkerderprovinz/euro-office",
+  "support": "https://github.com/junkerderprovinz/euro-office/issues",
+  "title": "Euro-Office",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.euro-office",
+  "version": "1.2.1",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 2507614841,
+    "arm64": 2487472374
+  }
+}

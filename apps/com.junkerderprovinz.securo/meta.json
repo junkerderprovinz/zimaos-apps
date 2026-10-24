@@ -1,0 +1,25 @@
+{
+  "tagline": "The Securo finance manager with its worker and scheduler in one container, on your own PostgreSQL and Redis or on built-in ones.",
+  "description": "Securo is a self-hosted personal finance manager: accounts, transactions, budgets, goals, assets and reports, with imports from OFX, QIF, CAMT and CSV and optional bank sync for European, US and Brazilian banks. Upstream runs it as six containers; this image puts the official backend and web app, the Celery worker and the scheduler into one.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/securo",
+  "support": "https://github.com/junkerderprovinz/securo/issues",
+  "title": "Securo",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.securo",
+  "version": "1.0.0",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 406229818,
+    "arm64": 395957643
+  }
+}
