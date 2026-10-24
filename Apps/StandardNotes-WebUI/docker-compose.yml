@@ -24,6 +24,6 @@ x-casaos:
   developer: Standard Notes
   architectures:
   - amd64
-  version: 2026.10.17
+  version: 2026.10.23
   repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/standardnotes-webui/README.md
   support: https://github.com/junkerderprovinz/unraid-apps/issues
