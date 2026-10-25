@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/zimaos-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/zimaos-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-35-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-36-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/zimaos-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/zimaos-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://github.com/IceWhaleTech/ZimaOS"><img src="https://img.shields.io/badge/ZimaOS-Community%20store-1a1a1a?style=for-the-badge&logoColor=white" alt="ZimaOS community store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -255,6 +255,16 @@ PhotoCraft on a Selkies web desktop: a layered photo editor in the browser that 
 
 **PrusaSlicer**<br>
 The PrusaSlicer 3D-printing slicer in your browser on a fast Selkies web desktop: slice and export G-code, no VNC client (amd64 + arm64).
+
+<br clear="all">
+
+<a id="rustdesk"></a>
+<img src=".github/readme-icons/rustdesk.png" width="84" align="left" alt="RustDesk">
+<a href="https://github.com/junkerderprovinz/rustdesk#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+<a href="https://github.com/junkerderprovinz/rustdesk/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
+
+**RustDesk**<br>
+Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.
 
 <br clear="all">
 

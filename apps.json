@@ -125,6 +125,12 @@
     "paths": {"/storage": "/DATA"},
     "ports": {"3000": 32130, "3001": 32131}
   },
+  "rustdesk": {
+    "category": "Others",
+    "developer": "RustDesk",
+    "tagline": "Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.",
+    "description": "RustDesk is an open-source remote desktop for Windows, macOS, Linux, Android and iOS. This server adds a web console, user accounts, a shared address book and a web client to the ID server and the relay."
+  },
   "rustfs": {
     "category": "Others",
     "developer": "RustFS",

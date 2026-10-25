@@ -1,0 +1,51 @@
+name: rustdesk
+services:
+  rustdesk:
+    image: junkerderprovinz/rustdesk:latest
+    container_name: rustdesk
+    restart: unless-stopped
+    ports:
+    - 21114:21114
+    - 21115:21115
+    - 21116:21116
+    - 21116:21116/udp
+    - 21117:21117
+    - 21118:21118
+    - 21119:21119
+    volumes:
+    - /DATA/AppData/$AppID:/data
+    - /DATA/AppData/$AppID/api:/app/data
+    environment:
+      RELAY: ''
+      RUSTDESK_API_RUSTDESK_ID_SERVER: ''
+      RUSTDESK_API_RUSTDESK_RELAY_SERVER: ''
+      RUSTDESK_API_RUSTDESK_API_SERVER: ''
+      ENCRYPTED_ONLY: '1'
+      MUST_LOGIN: N
+      RUSTDESK_API_LANG: en
+      TZ: $TZ
+x-casaos:
+  id: com.junkerderprovinz.rustdesk
+  main: rustdesk
+  index: /_admin/
+  port_map: '21114'
+  scheme: http
+  title:
+    en_US: RustDesk
+  tagline:
+    en_US: Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.
+  description:
+    en_US: RustDesk is an open-source remote desktop for Windows, macOS, Linux, Android and iOS. This server adds a web console, user accounts, a shared address book and a web client to the ID server and the relay.
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/RustDesk/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: RustDesk
+  architectures:
+  - amd64
+  - arm64
+  version: 1.0.1
+  tips:
+    before_install:
+      en_US: Set RELAY, RUSTDESK_API_RUSTDESK_ID_SERVER, RUSTDESK_API_RUSTDESK_RELAY_SERVER, RUSTDESK_API_RUSTDESK_API_SERVER under Custom Installation before the first start.
+  repo: https://github.com/junkerderprovinz/rustdesk
+  support: https://github.com/junkerderprovinz/rustdesk/issues
