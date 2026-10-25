@@ -32,6 +32,8 @@ x-casaos:
   - amd64
   - arm
   - arm64
-  version: 4.48.0
+  - ppc64le
+  - s390x
+  version: 4.50.0
   repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md
   support: https://github.com/junkerderprovinz/unraid-apps/issues
