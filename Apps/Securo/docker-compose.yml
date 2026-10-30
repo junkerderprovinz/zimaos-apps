@@ -44,6 +44,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.0.0
+  version: 1.0.1
   repo: https://github.com/junkerderprovinz/securo
   support: https://github.com/junkerderprovinz/securo/issues

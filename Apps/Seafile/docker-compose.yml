@@ -41,7 +41,7 @@ x-casaos:
   developer: Seafile
   architectures:
   - amd64
-  version: 1.1.0
+  version: 1.1.1
   tips:
     before_install:
       en_US: Set SEAFILE_SERVER_HOSTNAME, INIT_SEAFILE_ADMIN_EMAIL under Custom Installation before the first start.

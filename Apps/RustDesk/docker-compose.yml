@@ -43,7 +43,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.0.1
+  version: 1.0.2
   tips:
     before_install:
       en_US: Set RELAY, RUSTDESK_API_RUSTDESK_ID_SERVER, RUSTDESK_API_RUSTDESK_RELAY_SERVER, RUSTDESK_API_RUSTDESK_API_SERVER under Custom Installation before the first start.

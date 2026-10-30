@@ -43,7 +43,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.4.2
+  version: 1.4.3
   tips:
     before_install:
       en_US: Set OC_URL under Custom Installation before the first start. Starts with IDM_ADMIN_PASSWORD as casaos. Change it under Custom Installation before you store real data.

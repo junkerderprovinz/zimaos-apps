@@ -39,6 +39,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 4.8.0
+  version: 4.8.1
   repo: https://github.com/junkerderprovinz/jdownloader
   support: https://github.com/junkerderprovinz/jdownloader/issues
