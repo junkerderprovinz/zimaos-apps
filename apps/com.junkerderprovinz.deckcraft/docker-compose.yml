@@ -1,0 +1,28 @@
+name: deckcraft
+services:
+  deckcraft:
+    image: junkerderprovinz/deckcraft:latest
+    container_name: deckcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32011:3001
+      - 32010:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.deckcraft
+  main: deckcraft
+  index: /
+  port_map: '32011'
+  scheme: https
+  title:
+    en_US: DeckCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.deckcraft/assets/icon.png
+  version: 1.1.0

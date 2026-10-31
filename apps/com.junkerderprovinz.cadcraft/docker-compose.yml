@@ -1,0 +1,28 @@
+name: cadcraft
+services:
+  cadcraft:
+    image: junkerderprovinz/cadcraft:latest
+    container_name: cadcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32001:3001
+      - 32000:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.cadcraft
+  main: cadcraft
+  index: /
+  port_map: '32001'
+  scheme: https
+  title:
+    en_US: CADCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.cadcraft/assets/icon.png
+  version: 1.1.0

@@ -1,0 +1,25 @@
+{
+  "tagline": "Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.",
+  "description": "Sync your files everywhere. See the plan before anything moves.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/arrowloop",
+  "support": "https://github.com/junkerderprovinz/arrowloop/issues",
+  "title": "ArrowLoop",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.arrowloop",
+  "version": "2.4.0",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 64490465,
+    "arm64": 62506755
+  }
+}

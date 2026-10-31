@@ -1,0 +1,28 @@
+{
+  "tagline": "An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.",
+  "description": "RustFS is an S3-compatible object store written in Rust under the Apache-2.0 licence, one of the alternatives people turned to after MinIO's open edition stopped moving.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "RustFS",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Starts with RUSTFS_ACCESS_KEY as admin and RUSTFS_SECRET_KEY as casaos. Change them under Custom Installation before you store real data."
+  },
+  "repo": "https://github.com/junkerderprovinz/unraid-apps/blob/main/rustfs/README.md",
+  "support": "https://github.com/junkerderprovinz/unraid-apps/issues",
+  "title": "RustFS",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.rustfs",
+  "version": "1.0.4",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 115072318,
+    "arm64": 109669278
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "tagline": "The hand-drawn whiteboard, built so it keeps to itself: shared links, live collaboration, the session scene and even the fonts all come from your own server.",
+  "description": "Excalidraw is a virtual whiteboard for sketches that look hand-drawn. This is a self-hosted build of it that keeps to itself: shared links, live collaboration, the session scene, the fonts and the icons all come from your own server, and the browser never contacts anyone else.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "Excalidraw",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/excalidraw",
+  "support": "https://github.com/junkerderprovinz/excalidraw/issues",
+  "title": "Excalidraw",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.excalidraw",
+  "version": "1.0.1",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 92525822,
+    "arm64": 92038744
+  }
+}

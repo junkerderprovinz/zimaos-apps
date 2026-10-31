@@ -1,0 +1,27 @@
+name: garage
+services:
+  garage:
+    image: junkerderprovinz/garage:latest@sha256:d815506338ce199f4c40166e9c65d187c9898d2464081338a0c107d8cb6b6065
+    container_name: garage
+    restart: unless-stopped
+    ports:
+      - 3900:3900
+      - 3909:3909
+      - 3902:3902
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+      - /DATA/AppData/$AppID/config:/config
+    environment:
+      DB_ENGINE: sqlite
+      PUID: $PUID
+      PGID: $PGID
+x-casaos:
+  id: com.junkerderprovinz.garage
+  main: garage
+  index: /
+  port_map: '3909'
+  scheme: http
+  title:
+    en_US: Garage
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.garage/assets/icon.png
+  version: 1.0.2

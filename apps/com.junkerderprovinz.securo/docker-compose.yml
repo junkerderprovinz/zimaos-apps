@@ -1,0 +1,37 @@
+name: securo
+services:
+  securo:
+    image: junkerderprovinz/securo:latest
+    container_name: securo
+    restart: unless-stopped
+    ports:
+      - 3000:8080
+    volumes:
+      - /DATA/AppData/$AppID:/data
+    environment:
+      BUILTIN_POSTGRES: 'true'
+      POSTGRES_USER: postgres
+      BUILTIN_REDIS: 'true'
+      REGISTRATION_ENABLED: 'true'
+      POSTGRES_PORT: '5432'
+      POSTGRES_DB: securo
+      REDIS_PORT: '6379'
+      REDIS_DB: '0'
+      TRUSTED_PROXY_HOPS: '1'
+      SIMPLEFIN_ENABLED: 'false'
+      SIMPLEFIN_API_URL: https://beta-bridge.simplefin.org
+      OIDC_ENABLED: 'false'
+      OIDC_PROVIDER_NAME: OIDC
+      LOCAL_AUTH_ENABLED: 'true'
+      PUID: $PUID
+      PGID: $PGID
+x-casaos:
+  id: com.junkerderprovinz.securo
+  main: securo
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: Securo
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.securo/assets/icon.png
+  version: 1.0.1

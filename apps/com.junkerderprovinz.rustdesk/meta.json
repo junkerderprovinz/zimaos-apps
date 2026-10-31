@@ -1,0 +1,28 @@
+{
+  "tagline": "Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.",
+  "description": "RustDesk is an open-source remote desktop for Windows, macOS, Linux, Android and iOS. This server adds a web console, user accounts, a shared address book and a web client to the ID server and the relay.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "RustDesk",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Set RELAY, RUSTDESK_API_RUSTDESK_ID_SERVER, RUSTDESK_API_RUSTDESK_RELAY_SERVER, RUSTDESK_API_RUSTDESK_API_SERVER under Custom Installation before the first start."
+  },
+  "repo": "https://github.com/junkerderprovinz/rustdesk",
+  "support": "https://github.com/junkerderprovinz/rustdesk/issues",
+  "title": "RustDesk",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.rustdesk",
+  "version": "1.0.2",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 39278817,
+    "arm64": 39375487
+  }
+}

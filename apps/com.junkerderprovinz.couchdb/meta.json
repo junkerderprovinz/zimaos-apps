@@ -1,0 +1,28 @@
+{
+  "tagline": "The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.",
+  "description": "The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.",
+  "category": "Developer",
+  "author": "Junker der Provinz",
+  "developer": "Apache Software Foundation",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Starts with COUCHDB_PASSWORD as casaos. Change it under Custom Installation before you store real data."
+  },
+  "repo": "https://github.com/junkerderprovinz/unraid-apps/blob/main/couchdb/README.md",
+  "support": "https://github.com/junkerderprovinz/unraid-apps/issues",
+  "title": "couchdb",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.couchdb",
+  "version": "3.5.3",
+  "categories": [
+    "developer"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 150838618,
+    "arm64": 150557089
+  }
+}

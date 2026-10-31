@@ -1,0 +1,35 @@
+name: seafile
+services:
+  seafile:
+    image: junkerderprovinz/seafile:latest
+    container_name: seafile
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - /DATA/AppData/$AppID:/shared
+    environment:
+      SEAFILE_SERVER_HOSTNAME: ''
+      SEAFILE_SERVER_PROTOCOL: http
+      INIT_SEAFILE_ADMIN_EMAIL: ''
+      BUILTIN_MARIADB: 'true'
+      BUILTIN_REDIS: 'true'
+      ENABLE_NOTIFICATION_SERVER: 'false'
+      SEAFILE_MYSQL_DB_PORT: '3306'
+      SEAFILE_MYSQL_DB_USER: seafile
+      SEAFILE_MYSQL_DB_CCNET_DB_NAME: ccnet_db
+      SEAFILE_MYSQL_DB_SEAFILE_DB_NAME: seafile_db
+      SEAFILE_MYSQL_DB_SEAHUB_DB_NAME: seahub_db
+      REDIS_PORT: '6379'
+      OFFICE: 'off'
+      ENABLE_SEADOC: 'false'
+x-casaos:
+  id: com.junkerderprovinz.seafile
+  main: seafile
+  index: /
+  port_map: '8000'
+  scheme: http
+  title:
+    en_US: Seafile
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.seafile/assets/icon.png
+  version: 1.1.1

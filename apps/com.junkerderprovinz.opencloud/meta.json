@@ -1,0 +1,28 @@
+{
+  "tagline": "One-click OpenCloud file sync & share: auto-runs init, heals appdata permissions and honours PUID/PGID.",
+  "description": "One-click OpenCloud file sync & share: auto-runs init, heals appdata permissions and honours PUID/PGID.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "OpenCloud",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Set OC_URL under Custom Installation before the first start. Starts with IDM_ADMIN_PASSWORD as casaos. Change it under Custom Installation before you store real data."
+  },
+  "repo": "https://github.com/junkerderprovinz/opencloud",
+  "support": "https://github.com/junkerderprovinz/opencloud/issues",
+  "title": "OpenCloud",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.opencloud",
+  "version": "1.4.3",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 83823166,
+    "arm64": 78961025
+  }
+}

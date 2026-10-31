@@ -1,0 +1,28 @@
+name: soundcraft
+services:
+  soundcraft:
+    image: junkerderprovinz/soundcraft:latest@sha256:6b16282b5deacdb578a4c76ccbd4df7acbefaa3b455e7dddaaef6d0195b6fdd4
+    container_name: soundcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32141:3001
+      - 32140:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.soundcraft
+  main: soundcraft
+  index: /
+  port_map: '32141'
+  scheme: https
+  title:
+    en_US: SoundCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.soundcraft/assets/icon.png
+  version: 1.1.0

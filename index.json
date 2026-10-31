@@ -1,0 +1,766 @@
+{
+  "version": 2,
+  "updated_at": "2026-10-31T10:34:33Z",
+  "app_count": 36,
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "apps": [
+    {
+      "id": "com.junkerderprovinz.arrowloop",
+      "title": "ArrowLoop",
+      "tagline": "Two-way file sync that shows you the plan before it touches a file, sends deletions to a trash and stops a run that would delete too much.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.arrowloop/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.arrowloop/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.arrowloop/meta.json",
+      "content_hash": "13d97015",
+      "version": "2.4.0"
+    },
+    {
+      "id": "com.junkerderprovinz.bombvault",
+      "title": "BombVault",
+      "tagline": "Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.bombvault/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.bombvault/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.bombvault/meta.json",
+      "content_hash": "086b456c",
+      "version": "10.3.8"
+    },
+    {
+      "id": "com.junkerderprovinz.cadcraft",
+      "title": "CADCraft",
+      "tagline": "CADCraft on a Selkies web desktop: 2D drafting with layers, blocks and dimensions, and DXF and DWG files, all in the browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.cadcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.cadcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.cadcraft/meta.json",
+      "content_hash": "5860d35e",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.couchdb",
+      "title": "couchdb",
+      "tagline": "The HTTP/JSON document database behind Obsidian LiveSync, on the official 3.x image with data, config and CORS mapped so they survive a recreate or update.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Apache Software Foundation",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.couchdb/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.couchdb/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.couchdb/meta.json",
+      "content_hash": "3f759033",
+      "version": "3.5.3"
+    },
+    {
+      "id": "com.junkerderprovinz.deckcraft",
+      "title": "DeckCraft",
+      "tagline": "DeckCraft on a Selkies web desktop, for building and presenting PowerPoint decks from any browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.deckcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.deckcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.deckcraft/meta.json",
+      "content_hash": "ee7c5c16",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.designcraft",
+      "title": "DesignCraft",
+      "tagline": "DesignCraft on a Selkies web desktop: lay out magazines and flyers in the browser and export print-ready PDFs.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.designcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.designcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.designcraft/meta.json",
+      "content_hash": "03c95155",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.effectcraft",
+      "title": "EffectCraft",
+      "tagline": "EffectCraft on a Selkies web desktop, for motion graphics with compositions, keyframes and effects in the browser.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.effectcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.effectcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.effectcraft/meta.json",
+      "content_hash": "2d6f02e2",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.euro-office",
+      "title": "Euro-Office",
+      "tagline": "Sovereign, OnlyOffice-compatible document server for browser editing of Office and OpenDocument files, wired into OpenCloud over WOPI.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Euro-Office",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.euro-office/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.euro-office/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.euro-office/meta.json",
+      "content_hash": "e8372115",
+      "version": "1.2.1"
+    },
+    {
+      "id": "com.junkerderprovinz.excalidraw",
+      "title": "Excalidraw",
+      "tagline": "The hand-drawn whiteboard, built so it keeps to itself: shared links, live collaboration, the session scene and even the fonts all come from your own server.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Excalidraw",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.excalidraw/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.excalidraw/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.excalidraw/meta.json",
+      "content_hash": "f01df4e7",
+      "version": "1.0.1"
+    },
+    {
+      "id": "com.junkerderprovinz.featherdrop",
+      "title": "featherdrop",
+      "tagline": "Your own private WeTransfer: feather-light, login-free, end-to-end encrypted file sharing with self-expiring share links.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.featherdrop/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.featherdrop/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.featherdrop/meta.json",
+      "content_hash": "86d27e4b",
+      "version": "6.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.figcraft",
+      "title": "FigCraft",
+      "tagline": "FigCraft on a Selkies web desktop: design interfaces with frames and components and click through prototypes in the browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.figcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.figcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.figcraft/meta.json",
+      "content_hash": "db745593",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.filmcraft",
+      "title": "FilmCraft",
+      "tagline": "FilmCraft on a Selkies web desktop, a nonlinear video editor that cuts the footage on your array from any browser.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.filmcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.filmcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.filmcraft/meta.json",
+      "content_hash": "a10d3b55",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.garage",
+      "title": "Garage",
+      "tagline": "Garage's S3-compatible object store and its web admin panel in one container, with the single-node layout and S3 keys created automatically.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Deuxfleurs",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.garage/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.garage/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.garage/meta.json",
+      "content_hash": "46dfe9e8",
+      "version": "1.0.2"
+    },
+    {
+      "id": "com.junkerderprovinz.gridcraft",
+      "title": "GridCraft",
+      "tagline": "GridCraft on a Selkies web desktop: a spreadsheet with formulas and charts that opens and saves Excel workbooks.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.gridcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.gridcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.gridcraft/meta.json",
+      "content_hash": "6ad13654",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.handbrake",
+      "title": "HandBrake",
+      "tagline": "HandBrake's full GUI on a fast Selkies web desktop, GPU-accelerated on NVIDIA, Intel and AMD, with a watch folder that converts on its own.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "HandBrake",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.handbrake/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.handbrake/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.handbrake/meta.json",
+      "content_hash": "10ff9dda",
+      "version": "1.3.0"
+    },
+    {
+      "id": "com.junkerderprovinz.jdownloader",
+      "title": "JDownloader",
+      "tagline": "JDownloader 2 with a complete, sleek dark UI out of the box, on a fast Selkies web desktop in your browser. No VNC client, no install.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "AppWork",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.jdownloader/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.jdownloader/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.jdownloader/meta.json",
+      "content_hash": "8e2128c5",
+      "version": "4.8.1"
+    },
+    {
+      "id": "com.junkerderprovinz.knightloader",
+      "title": "KnightLoader",
+      "tagline": "Self-hosted download manager for hosters, debrid, torrents, Usenet and video, with an Android app and a browser extension.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.knightloader/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.knightloader/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.knightloader/meta.json",
+      "content_hash": "8a8cc504",
+      "version": "2.4.0"
+    },
+    {
+      "id": "com.junkerderprovinz.krusader",
+      "title": "Krusader",
+      "tagline": "Twin-pane KDE file manager with a native dark theme on a fast Selkies web desktop, with Kate, krename and RAR built in.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "KDE",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.krusader/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.krusader/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.krusader/meta.json",
+      "content_hash": "a8ef0e4f",
+      "version": "2.6.1"
+    },
+    {
+      "id": "com.junkerderprovinz.lightcraft",
+      "title": "LightCraft",
+      "tagline": "LightCraft on a Selkies web desktop, a photo library and raw developer that sits right next to the photos on your array.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.lightcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.lightcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.lightcraft/meta.json",
+      "content_hash": "c910142c",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.opencloud",
+      "title": "OpenCloud",
+      "tagline": "One-click OpenCloud file sync & share: auto-runs init, heals appdata permissions and honours PUID/PGID.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "OpenCloud",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.opencloud/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.opencloud/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.opencloud/meta.json",
+      "content_hash": "1380991c",
+      "version": "1.4.3"
+    },
+    {
+      "id": "com.junkerderprovinz.pdfcraft",
+      "title": "PdfCraft",
+      "tagline": "PdfCraft on a Selkies web desktop, for reading, editing, signing and running OCR on PDFs in the browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.pdfcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.pdfcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.pdfcraft/meta.json",
+      "content_hash": "d648ce54",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.photocraft",
+      "title": "PhotoCraft",
+      "tagline": "PhotoCraft on a Selkies web desktop: a layered photo editor in the browser that opens PSD, Krita and Affinity files.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.photocraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.photocraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.photocraft/meta.json",
+      "content_hash": "ac94f7e3",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.prusaslicer",
+      "title": "PrusaSlicer",
+      "tagline": "The PrusaSlicer 3D-printing slicer in your browser on a fast Selkies web desktop: slice and export G-code, no VNC client (amd64 + arm64).",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Prusa Research",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.prusaslicer/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.prusaslicer/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.prusaslicer/meta.json",
+      "content_hash": "716e09a1",
+      "version": "1.2.0"
+    },
+    {
+      "id": "com.junkerderprovinz.rustdesk",
+      "title": "RustDesk",
+      "tagline": "Your own RustDesk server with a web console, accounts, an address book on every client and devices that can change their ID.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "RustDesk",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.rustdesk/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.rustdesk/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.rustdesk/meta.json",
+      "content_hash": "15ae394e",
+      "version": "1.0.2"
+    },
+    {
+      "id": "com.junkerderprovinz.rustfs",
+      "title": "RustFS",
+      "tagline": "An S3-compatible object store written in Rust. Still a pre-release: every version so far is a release candidate.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "RustFS",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.rustfs/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.rustfs/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.rustfs/meta.json",
+      "content_hash": "b09cc2a4",
+      "version": "1.0.4"
+    },
+    {
+      "id": "com.junkerderprovinz.seafile",
+      "title": "Seafile",
+      "tagline": "The official Seafile server, with its secrets generated on first start and MariaDB, Redis and the notification server built in.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Seafile",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.seafile/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.seafile/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.seafile/meta.json",
+      "content_hash": "d65052e2",
+      "version": "1.1.1"
+    },
+    {
+      "id": "com.junkerderprovinz.seaweedfs",
+      "title": "SeaweedFS",
+      "tagline": "Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Chris Lu",
+      "architectures": [
+        "386",
+        "amd64",
+        "arm",
+        "arm64",
+        "ppc64le",
+        "s390x"
+      ],
+      "icon": "/apps/com.junkerderprovinz.seaweedfs/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.seaweedfs/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.seaweedfs/meta.json",
+      "content_hash": "dc065199",
+      "version": "4.50.0"
+    },
+    {
+      "id": "com.junkerderprovinz.securo",
+      "title": "Securo",
+      "tagline": "The Securo finance manager with its worker and scheduler in one container, on your own PostgreSQL and Redis or on built-in ones.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.securo/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.securo/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.securo/meta.json",
+      "content_hash": "d98c1bda",
+      "version": "1.0.1"
+    },
+    {
+      "id": "com.junkerderprovinz.silo",
+      "title": "Silo",
+      "tagline": "MinIO, still maintained: PGSTY's fork of the open-source server, with the full web console. It reads an existing MinIO data folder as it is.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Pigsty",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.silo/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.silo/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.silo/meta.json",
+      "content_hash": "8e30441a",
+      "version": "2026.10.26"
+    },
+    {
+      "id": "com.junkerderprovinz.soundcraft",
+      "title": "SoundCraft",
+      "tagline": "SoundCraft on a Selkies web desktop, a multitrack audio workstation whose sound plays in the browser.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.soundcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.soundcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.soundcraft/meta.json",
+      "content_hash": "20534005",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.standardnotes-webui",
+      "title": "StandardNotes-WebUI",
+      "tagline": "The official Standard Notes web client, self-hosted next to your own sync server for end-to-end encrypted notes in the browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Standard Notes",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.standardnotes-webui/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.standardnotes-webui/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.standardnotes-webui/meta.json",
+      "content_hash": "cd003319",
+      "version": "2026.10.30"
+    },
+    {
+      "id": "com.junkerderprovinz.stellarium",
+      "title": "Stellarium",
+      "tagline": "The Stellarium planetarium in your browser on a fast Selkies web desktop: pan the sky, zoom a nebula, scrub through time, no VNC client.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Stellarium",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.stellarium/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.stellarium/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.stellarium/meta.json",
+      "content_hash": "385cf1a7",
+      "version": "1.2.0"
+    },
+    {
+      "id": "com.junkerderprovinz.trickwork",
+      "title": "TrickWork",
+      "tagline": "Turns images into proportional-font-aware ASCII art - a rebuild of ASCII Gen 2, picking characters by real ink coverage, not brightness.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Junker der Provinz",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.trickwork/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.trickwork/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.trickwork/meta.json",
+      "content_hash": "0fca1095",
+      "version": "1.6.0"
+    },
+    {
+      "id": "com.junkerderprovinz.vectorcraft",
+      "title": "VectorCraft",
+      "tagline": "VectorCraft on a Selkies web desktop: vector illustration with paths and type, SVG and PDF in and out.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.vectorcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.vectorcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.vectorcraft/meta.json",
+      "content_hash": "cd985945",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.junkerderprovinz.versitygw",
+      "title": "VersityGW",
+      "tagline": "An S3 API in front of a share you already have: top-level folders become buckets, and every file stays readable over SMB and NFS at the same time.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "Versity",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.versitygw/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.versitygw/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.versitygw/meta.json",
+      "content_hash": "02bc2080",
+      "version": "1.10.0"
+    },
+    {
+      "id": "com.junkerderprovinz.wordcraft",
+      "title": "WordCraft",
+      "tagline": "WordCraft on a Selkies web desktop, a word processor in the browser that opens and saves Word documents.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "Junker der Provinz",
+      "developer": "ArtCraft team",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.junkerderprovinz.wordcraft/assets/icon.png",
+      "thumbnail": "",
+      "compose_url": "/apps/com.junkerderprovinz.wordcraft/docker-compose.yml",
+      "meta_url": "/apps/com.junkerderprovinz.wordcraft/meta.json",
+      "content_hash": "7d46e588",
+      "version": "1.1.0"
+    }
+  ]
+}

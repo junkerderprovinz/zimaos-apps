@@ -1,0 +1,26 @@
+{
+  "tagline": "The official Seafile server, with its secrets generated on first start and MariaDB, Redis and the notification server built in.",
+  "description": "Seafile is a file sync and share server with desktop and mobile clients, libraries you can encrypt on the client, and built-in wikis.",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "Seafile",
+  "architectures": [
+    "amd64"
+  ],
+  "tips": {
+    "before_install": "Set SEAFILE_SERVER_HOSTNAME, INIT_SEAFILE_ADMIN_EMAIL under Custom Installation before the first start."
+  },
+  "repo": "https://github.com/junkerderprovinz/seafile",
+  "support": "https://github.com/junkerderprovinz/seafile/issues",
+  "title": "Seafile",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.seafile",
+  "version": "1.1.1",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 602770847
+  }
+}

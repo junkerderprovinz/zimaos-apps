@@ -1,0 +1,24 @@
+name: couchdb
+services:
+  couchdb:
+    image: couchdb:latest@sha256:85c1ca31e0c88a00644c23d085a5e76b17dfb041e095703d391b703558f5f3e2
+    container_name: couchdb
+    restart: unless-stopped
+    ports:
+      - 5984:5984
+    volumes:
+      - /DATA/AppData/$AppID/data:/opt/couchdb/data
+      - /DATA/AppData/$AppID/local.d:/opt/couchdb/etc/local.d
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: casaos
+x-casaos:
+  id: com.junkerderprovinz.couchdb
+  main: couchdb
+  index: /_utils/
+  port_map: '5984'
+  scheme: http
+  title:
+    en_US: couchdb
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.couchdb/assets/icon.png
+  version: 3.5.3

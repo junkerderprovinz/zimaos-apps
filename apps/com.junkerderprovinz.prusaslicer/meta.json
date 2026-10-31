@@ -1,0 +1,25 @@
+{
+  "tagline": "The PrusaSlicer 3D-printing slicer in your browser on a fast Selkies web desktop: slice and export G-code, no VNC client (amd64 + arm64).",
+  "description": "PrusaSlicer, the FDM/SLA 3D-printing slicer from Prusa Research, on a Selkies web desktop. Slice in your browser: no VNC client, no local install. LinuxServer ship OrcaSlicer and Cura on Selkies but no PrusaSlicer; the only other browser images are years-old, abandoned noVNC builds. This is a maintained, modern Selkies (WebRTC) build for amd64 and arm64.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Prusa Research",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/prusaslicer",
+  "support": "https://github.com/junkerderprovinz/prusaslicer/issues",
+  "title": "PrusaSlicer",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.prusaslicer",
+  "version": "1.2.0",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1218272350,
+    "arm64": 1169751659
+  }
+}

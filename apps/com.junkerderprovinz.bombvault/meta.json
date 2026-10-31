@@ -1,0 +1,28 @@
+{
+  "tagline": "Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.",
+  "description": "Backup and disaster recovery for containers and VMs, powered by restic, with one-click backup and cross-server restore.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Set APP_KEY under Custom Installation before the first start. APP_KEY takes 64 lowercase hex characters, for example from openssl rand -hex 32. Keep it safe: without it the encrypted backups cannot be restored."
+  },
+  "repo": "https://github.com/junkerderprovinz/bombvault",
+  "support": "https://github.com/junkerderprovinz/bombvault/issues",
+  "title": "BombVault",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.bombvault",
+  "version": "10.3.8",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 112080526,
+    "arm64": 107207568
+  }
+}

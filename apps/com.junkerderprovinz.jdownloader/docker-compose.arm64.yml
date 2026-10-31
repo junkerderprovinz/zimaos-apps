@@ -1,0 +1,32 @@
+name: jdownloader
+services:
+  jdownloader:
+    image: junkerderprovinz/jdownloader:latest@sha256:3474f9669fb4724db2ef4c2f9fc498be68e6cc677af778ac78476eb2ec9f3a72
+    container_name: jdownloader
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32080:3000
+      - 32081:3001
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA/Downloads:/downloads
+    environment:
+      JD_THEME: Dark
+      JD_ACCENT: '#ffee00'
+      JD_SELFUPDATE: 'true'
+      JD_ENABLE_BROWSER: auto
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.jdownloader
+  main: jdownloader
+  index: /
+  port_map: '32081'
+  scheme: https
+  title:
+    en_US: JDownloader
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.jdownloader/assets/icon.png
+  version: 4.8.1
