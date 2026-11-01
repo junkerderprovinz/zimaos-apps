@@ -58,6 +58,12 @@
     "paths": {"/storage": "/DATA"},
     "ports": {"3000": 32040, "3001": 32041}
   },
+  "filebot": {
+    "category": "Media",
+    "developer": "Reinhard Pointner",
+    "paths": {"/storage": "/DATA"},
+    "ports": {"3000": 32180, "3001": 32181}
+  },
   "filmcraft": {
     "category": "Media",
     "developer": "ArtCraft team",

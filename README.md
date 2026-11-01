@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/zimaos-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/zimaos-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-36-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-37-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/zimaos-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/zimaos-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://github.com/IceWhaleTech/ZimaOS"><img src="https://img.shields.io/badge/ZimaOS-Community%20store-1a1a1a?style=for-the-badge&logoColor=white" alt="ZimaOS community store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -145,6 +145,15 @@ The hand-drawn whiteboard, built so it keeps to itself: shared links, live colla
 
 **FigCraft**<br>
 FigCraft on a Selkies web desktop: design interfaces with frames and components and click through prototypes in the browser.
+
+<br clear="all">
+
+<a id="filebot"></a>
+<img src=".github/readme-icons/filebot.png" width="84" align="left" alt="FileBot">
+<a href="https://github.com/junkerderprovinz/filebot#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+
+**FileBot**<br>
+The FileBot media renamer in your browser on a fast Selkies web desktop, dark from the first start. Bring your own FileBot license.
 
 <br clear="all">
 
