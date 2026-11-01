@@ -12,8 +12,7 @@ services:
     - /DATA/AppData/$AppID:/config
     - /DATA/Downloads:/downloads
     environment:
-      JD_THEME: Dark
-      JD_ACCENT: '#ffee00'
+      JD_THEME: jd-highlighter-dark
       JD_SELFUPDATE: 'true'
       JD_ENABLE_BROWSER: auto
       TZ: $TZ
@@ -39,6 +38,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 4.8.1
+  version: 4.9.0
   repo: https://github.com/junkerderprovinz/jdownloader
   support: https://github.com/junkerderprovinz/jdownloader/issues
