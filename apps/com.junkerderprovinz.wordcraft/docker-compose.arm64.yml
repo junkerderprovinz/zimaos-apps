@@ -1,0 +1,28 @@
+name: wordcraft
+services:
+  wordcraft:
+    image: junkerderprovinz/wordcraft:latest@sha256:e855de36b007c997a6b67e29c7e0562ded9778b4a6129f6e371e49ff1bd8ae2d
+    container_name: wordcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32171:3001
+      - 32170:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.wordcraft
+  main: wordcraft
+  index: /
+  port_map: '32171'
+  scheme: https
+  title:
+    en_US: WordCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.wordcraft/assets/icon.png
+  version: 1.1.0

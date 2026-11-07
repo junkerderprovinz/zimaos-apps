@@ -1,0 +1,23 @@
+name: seaweedfs
+services:
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest@sha256:fa2ecb00b0c82f0b3e5d0d3db79025722a7ffcf8a5a4877c33e7d2645d01cd3f
+    container_name: seaweedfs
+    restart: unless-stopped
+    ports:
+      - 8333:8333
+      - 23646:23646
+      - 9333:9333
+      - 8888:8888
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+x-casaos:
+  id: com.junkerderprovinz.seaweedfs
+  main: seaweedfs
+  index: /
+  port_map: '23646'
+  scheme: http
+  title:
+    en_US: SeaweedFS
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.seaweedfs/assets/icon.png
+  version: 4.50.0

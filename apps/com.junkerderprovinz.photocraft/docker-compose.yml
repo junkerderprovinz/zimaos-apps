@@ -1,0 +1,28 @@
+name: photocraft
+services:
+  photocraft:
+    image: junkerderprovinz/photocraft:latest
+    container_name: photocraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32121:3001
+      - 32120:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.photocraft
+  main: photocraft
+  index: /
+  port_map: '32121'
+  scheme: https
+  title:
+    en_US: PhotoCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.photocraft/assets/icon.png
+  version: 1.1.0

@@ -1,0 +1,20 @@
+name: trickwork
+services:
+  trickwork:
+    image: ghcr.io/junkerderprovinz/trickwork:latest@sha256:03680566a98e1debc3ee671b8ee82fcbd20a6d1497dd1c15557520ee9b35c8d0
+    container_name: trickwork
+    restart: unless-stopped
+    ports:
+      - 3210:3210
+    environment:
+      PORT: '3210'
+x-casaos:
+  id: com.junkerderprovinz.trickwork
+  main: trickwork
+  index: /
+  port_map: '3210'
+  scheme: http
+  title:
+    en_US: TrickWork
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.trickwork/assets/icon.png
+  version: 1.6.0

@@ -1,0 +1,25 @@
+{
+  "tagline": "FilmCraft on a Selkies web desktop, a nonlinear video editor that cuts the footage on your array from any browser.",
+  "description": "FilmCraft, a nonlinear video editor in the spirit of Premiere Pro, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "ArtCraft team",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/artcraft-apps",
+  "support": "https://github.com/junkerderprovinz/artcraft-apps/issues",
+  "title": "FilmCraft",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.filmcraft",
+  "version": "1.1.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1029572579,
+    "arm64": 991399703
+  }
+}

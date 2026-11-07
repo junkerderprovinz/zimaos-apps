@@ -1,0 +1,25 @@
+{
+  "tagline": "Twin-pane KDE file manager with a native dark theme on a fast Selkies web desktop, with Kate, krename and RAR built in.",
+  "description": "Krusader file manager with native Dark Mode, running on a hardware-accelerated Selkies web desktop. It responds much faster than the noVNC-based Krusader containers (binhex / jlesage / ich777).",
+  "category": "Productivity",
+  "author": "Junker der Provinz",
+  "developer": "KDE",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/krusader",
+  "support": "https://github.com/junkerderprovinz/krusader/issues",
+  "title": "Krusader",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.krusader",
+  "version": "2.6.1",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1437507160,
+    "arm64": 1399299143
+  }
+}

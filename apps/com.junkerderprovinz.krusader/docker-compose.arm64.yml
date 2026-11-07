@@ -1,0 +1,31 @@
+name: krusader
+services:
+  krusader:
+    image: junkerderprovinz/krusader:latest@sha256:2adc08189b7e0d2024d349d66c34b57bb3a5b01ab7d7695dba65364792eee2b5
+    container_name: krusader
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32091:3001
+      - 32090:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      KRUSADER_LANG: de = Deutsch
+      KRUSADER_THEME: dark
+      KEYBOARD_LAYOUT: us
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.krusader
+  main: krusader
+  index: /
+  port_map: '32091'
+  scheme: https
+  title:
+    en_US: Krusader
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.krusader/assets/icon.png
+  version: 2.6.1

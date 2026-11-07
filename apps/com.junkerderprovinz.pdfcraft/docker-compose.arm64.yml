@@ -1,0 +1,28 @@
+name: pdfcraft
+services:
+  pdfcraft:
+    image: junkerderprovinz/pdfcraft:latest@sha256:65f46df1c2791605814d8d6b126cbe7ef9fb84ab0979b0e91cecd4bf34f1b28b
+    container_name: pdfcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32111:3001
+      - 32110:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.pdfcraft
+  main: pdfcraft
+  index: /
+  port_map: '32111'
+  scheme: https
+  title:
+    en_US: PdfCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.pdfcraft/assets/icon.png
+  version: 1.1.0

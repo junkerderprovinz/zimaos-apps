@@ -1,0 +1,40 @@
+name: filebot
+services:
+  filebot:
+    image: junkerderprovinz/filebot:latest
+    container_name: filebot
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32181:3001
+      - 32180:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+      FILEBOT_THEME: Darcula
+      AMC_ENABLED: '0'
+      AMC_INPUT_DIR: /watch
+      AMC_OUTPUT_DIR: /output
+      AMC_ACTION: test
+      AMC_CONFLICT: auto
+      AMC_MATCH_MODE: opportunistic
+      AMC_LANG: English
+      AMC_INTERVAL: '1800'
+      AMC_INPUT_STABLE_TIME: '10'
+      AMC_PROCESS_MUSIC: y
+      AMC_ARTWORK: n
+x-casaos:
+  id: com.junkerderprovinz.filebot
+  main: filebot
+  index: /
+  port_map: '32181'
+  scheme: https
+  title:
+    en_US: FileBot
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.filebot/assets/icon.png
+  version: 1.0.0

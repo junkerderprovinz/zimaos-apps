@@ -1,0 +1,25 @@
+{
+  "tagline": "PhotoCraft on a Selkies web desktop: a layered photo editor in the browser that opens PSD, Krita and Affinity files.",
+  "description": "PhotoCraft, a layered photo editor that opens PSD, Krita and Affinity files, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "ArtCraft team",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/artcraft-apps",
+  "support": "https://github.com/junkerderprovinz/artcraft-apps/issues",
+  "title": "PhotoCraft",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.photocraft",
+  "version": "1.1.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1045554052,
+    "arm64": 1005863075
+  }
+}

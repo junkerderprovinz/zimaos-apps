@@ -1,0 +1,25 @@
+{
+  "tagline": "SoundCraft on a Selkies web desktop, a multitrack audio workstation whose sound plays in the browser.",
+  "description": "SoundCraft, multitrack audio recording and mixing in the spirit of Pro Tools, on a Selkies web desktop. It runs in your browser without a VNC client or a local install, on amd64 and arm64.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "ArtCraft team",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/artcraft-apps",
+  "support": "https://github.com/junkerderprovinz/artcraft-apps/issues",
+  "title": "SoundCraft",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.soundcraft",
+  "version": "1.1.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 975386614,
+    "arm64": 938153517
+  }
+}

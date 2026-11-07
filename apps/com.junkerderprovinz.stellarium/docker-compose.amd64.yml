@@ -1,0 +1,27 @@
+name: stellarium
+services:
+  stellarium:
+    image: junkerderprovinz/stellarium:latest@sha256:91767120381c9fda65be9a1f3bafe5f42d553b15991f08de477424373f825962
+    container_name: stellarium
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32151:3001
+      - 32150:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.stellarium
+  main: stellarium
+  index: /
+  port_map: '32151'
+  scheme: https
+  title:
+    en_US: Stellarium
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.stellarium/assets/icon.png
+  version: 1.2.0

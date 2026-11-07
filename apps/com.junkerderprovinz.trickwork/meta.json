@@ -1,0 +1,25 @@
+{
+  "tagline": "Turns images into proportional-font-aware ASCII art - a rebuild of ASCII Gen 2, picking characters by real ink coverage, not brightness.",
+  "description": "TrickWork turns your images into proportional-font-aware ASCII art - a rebuild of the abandoned ASCII Gen 2, with a live interactive preview and TXT/XHTML/RTF/PNG export. Characters are picked by how much visual \"ink\" they actually cover at your chosen font, not just by brightness, so proportional (non-monospace) fonts render correctly instead of looking stretched or squashed. Nine of ASCII Gen 2's own original character ramps are built in, weighting mechanic included: repeat a character in the ramp and it claims proportionally more of the brightness range, exactly like the original. Fully stateless - no database, no accounts, nothing to configure beyond the port.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/trickwork",
+  "support": "https://github.com/junkerderprovinz/trickwork/issues",
+  "title": "TrickWork",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.trickwork",
+  "version": "1.6.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 5147720,
+    "arm64": 4911998
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "tagline": "HandBrake's full GUI on a fast Selkies web desktop, GPU-accelerated on NVIDIA, Intel and AMD, with a watch folder that converts on its own.",
+  "description": "The full HandBrake video transcoder GUI in your browser, running on a hardware-accelerated Selkies web desktop. It is dark by default and uses HandBrake's own native GTK dark mode rather than a repainted theme. Transcoding can run on NVIDIA, Intel and AMD GPUs.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "HandBrake",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/handbrake",
+  "support": "https://github.com/junkerderprovinz/handbrake/issues",
+  "title": "HandBrake",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.handbrake",
+  "version": "1.3.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1064723888,
+    "arm64": 1022407581
+  }
+}

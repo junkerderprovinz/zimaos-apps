@@ -1,0 +1,27 @@
+name: rustfs
+services:
+  rustfs:
+    image: rustfs/rustfs:latest@sha256:e287e99762a4a3e7b706526e01f2ff755f67db165e9be9f6b907adc6fb6d6ee1
+    container_name: rustfs
+    restart: unless-stopped
+    user: 0:0
+    ports:
+      - 9000:9000
+      - 9001:9001
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+    environment:
+      RUSTFS_ACCESS_KEY: admin
+      RUSTFS_SECRET_KEY: casaos
+      RUSTFS_CONSOLE_CORS_ALLOWED_ORIGINS: '*'
+      RUSTFS_OBS_LOGGER_LEVEL: warn
+x-casaos:
+  id: com.junkerderprovinz.rustfs
+  main: rustfs
+  index: /
+  port_map: '9001'
+  scheme: http
+  title:
+    en_US: RustFS
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.rustfs/assets/icon.png
+  version: 1.0.4
