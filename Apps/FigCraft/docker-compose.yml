@@ -35,6 +35,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.1.0
+  version: 1.1.1
   repo: https://github.com/junkerderprovinz/artcraft-apps
   support: https://github.com/junkerderprovinz/artcraft-apps/issues

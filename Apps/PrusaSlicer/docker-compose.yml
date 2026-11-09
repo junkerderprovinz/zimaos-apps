@@ -35,6 +35,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.2.0
+  version: 1.2.1
   repo: https://github.com/junkerderprovinz/prusaslicer
   support: https://github.com/junkerderprovinz/prusaslicer/issues

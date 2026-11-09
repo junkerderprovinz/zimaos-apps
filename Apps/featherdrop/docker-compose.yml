@@ -36,6 +36,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 6.1.0
+  version: 1.9.0
   repo: https://github.com/junkerderprovinz/featherdrop
   support: https://github.com/junkerderprovinz/featherdrop/issues
