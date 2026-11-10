@@ -43,13 +43,13 @@ Backup and full disaster recovery for containers, VMs and the flash, powered by 
 
 <br clear="all">
 
-<a id="featherdrop"></a>
-<img src=".github/readme-icons/featherdrop.png" width="84" align="left" alt="featherdrop">
-<a href="https://github.com/junkerderprovinz/featherdrop#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
-<a href="https://github.com/junkerderprovinz/featherdrop/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
+<a id="castleparcel"></a>
+<img src=".github/readme-icons/castleparcel.png" width="84" align="left" alt="CastleParcel">
+<a href="https://github.com/junkerderprovinz/castleparcel#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+<a href="https://github.com/junkerderprovinz/castleparcel/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
 
-**featherdrop**<br>
-Your own private WeTransfer: feather-light, login-free, end-to-end encrypted file sharing with self-expiring share links.
+**CastleParcel**<br>
+Your own file transfer service: login-free, end-to-end encrypted file sharing with self-expiring share links, file requests and notes. Formerly featherdrop.
 
 <br clear="all">
 

@@ -18,6 +18,10 @@
     "paths": {"/storage": "/DATA"},
     "ports": {"3000": 32000, "3001": 32001}
   },
+  "castleparcel": {
+    "category": "Productivity",
+    "name": "featherdrop"
+  },
   "couchdb": {
     "category": "Developer",
     "developer": "Apache Software Foundation"
@@ -48,9 +52,6 @@
     "name": "excalidraw-jdp",
     "category": "Productivity",
     "developer": "Excalidraw"
-  },
-  "featherdrop": {
-    "category": "Productivity"
   },
   "figcraft": {
     "category": "Productivity",

@@ -47,6 +47,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.0.1
+  version: 1.0.2
   repo: https://github.com/junkerderprovinz/filebot
   support: https://github.com/junkerderprovinz/filebot/issues
