@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/junkerderprovinz/zimaos-apps/actions/workflows/generate.yml"><img src="https://img.shields.io/github/actions/workflow/status/junkerderprovinz/zimaos-apps/generate.yml?branch=main&label=Generate&style=for-the-badge&logo=githubactions&logoColor=white" alt="Generate" height="36"></a>&nbsp;
-  <a href="#apps"><img src="https://img.shields.io/badge/Apps-37-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
+  <a href="#apps"><img src="https://img.shields.io/badge/Apps-38-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Apps" height="36"></a>&nbsp;
   <a href="https://github.com/junkerderprovinz/zimaos-apps/commits/main"><img src="https://img.shields.io/github/last-commit/junkerderprovinz/zimaos-apps?branch=main&style=for-the-badge&logo=git&logoColor=white&label=Updated" alt="Last commit" height="36"></a>&nbsp;
   <a href="https://github.com/IceWhaleTech/ZimaOS"><img src="https://img.shields.io/badge/ZimaOS-Community%20store-1a1a1a?style=for-the-badge&logoColor=white" alt="ZimaOS community store" height="36"></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" height="36"></a>
@@ -40,6 +40,16 @@ Two-way file sync that shows you the plan before it touches a file, sends deleti
 
 **BombVault**<br>
 Backup and full disaster recovery for containers, VMs and the flash, powered by restic, with one-click backup and cross-server restore.
+
+<br clear="all">
+
+<a id="cannoncommander"></a>
+<img src=".github/readme-icons/cannoncommander.png" width="84" align="left" alt="CannonCommander">
+<a href="https://github.com/junkerderprovinz/cannoncommander#readme"><img src="https://img.shields.io/badge/Repository%20%26%20ReadMe-393939?style=for-the-badge&logo=github&logoColor=white" align="right" alt="Repository &amp; ReadMe"></a>
+<a href="https://github.com/junkerderprovinz/cannoncommander/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
+
+**CannonCommander**<br>
+The most beautiful file manager you will ever run, and the only one you need: two panels, F5 to copy, jobs in the background and a trash for second thoughts.
 
 <br clear="all">
 
@@ -435,6 +445,7 @@ The apps are built from the Unraid templates in [unraid-apps](https://github.com
 - Appdata goes to `/DATA/AppData/<app>`. File managers and slicers see all of `/DATA`, downloads land in `/DATA/Downloads`.
 - `PUID`, `PGID` and `TZ` come from ZimaOS.
 - A password or key that the Unraid template asks for at install time starts as `casaos`, a user name or access key as `admin`, so a plain **Install** gets the app running.
+- CannonCommander sees `/DATA` where it looks for Unraid's user shares, `/mnt/user`, and keeps the capabilities and `/dev/fuse` it needs for rclone's mounts. It runs without Docker's AppArmor profile, which would refuse those mounts. The Unraid state and flash folders are left out.
 - RustFS runs as root, because ZimaOS creates its data folder as root and the image's own user cannot write to it.
 - Apps without a web page of their own (JuiceFS, ParleyPort) and apps that need a database next to them (Matrix, n8n, Claper) are not in the store yet.
 
@@ -444,7 +455,7 @@ To change an app, edit its template in unraid-apps, not the files in `Apps/`, `.
 python3 tools/generate.py ../unraid-apps
 ```
 
-`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`), name the upstream developer (`developer`), replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid, set variables (`env`, for example Silo's start password, which MinIO wants eight characters long), read a template file with another name (`xml`), leave a path out (`drop_paths`), add a line to the install tip (`tip`) or pick another internal name (`name`). CasaOS keys its catalog by that name across all stores, so Excalidraw and HandBrake use `excalidraw-jdp` and `handbrake-jdp` to sit next to the official ones instead of hiding them.
+`apps.json` lists the apps in the store with their store category. Per app it can also set where a folder goes on ZimaOS (`paths`) and where it shows up in the container (`targets`), name the upstream developer (`developer`), replace the short text and description (`tagline`, `description`) where the Unraid ones talk about Unraid, set variables (`env`, for example Silo's start password, which MinIO wants eight characters long), read a template file with another name (`xml`), leave a path out (`drop_paths`), set Docker's `security_opt` (`security_opt`), add a line to the install tip (`tip`) or pick another internal name (`name`). CasaOS keys its catalog by that name across all stores, so Excalidraw and HandBrake use `excalidraw-jdp` and `handbrake-jdp` to sit next to the official ones instead of hiding them.
 
 
 ## How AI is used here

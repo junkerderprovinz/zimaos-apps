@@ -179,7 +179,7 @@ def data_path(volume, overrides):
         host = "/DATA/AppData/$AppID" + host[len("./appdata"):]
     elif host.startswith("./"):
         host = overrides.get("paths", {}).get(target, f"/DATA/AppData/$AppID/{host[2:]}")
-    return ":".join([host, target, *mode])
+    return ":".join([host, overrides.get("targets", {}).get(target, target), *mode])
 
 
 def host_port(mapping, ports):
@@ -190,10 +190,17 @@ def host_port(mapping, ports):
 def build(feed, gen_compose, app, overrides):
     xml = overrides.get("xml", f"{app}.xml")
     root = ET.parse(feed / app / xml).getroot()
-    text, _ = gen_compose.compose(app, xml)
+    text, unknown = gen_compose.compose(app, xml)
     required = re.findall(r"^\s+(\w+):.*# required$", text, re.M)
     doc = yaml.safe_load(text)
     service = doc["services"][app]
+    caps = [arg.split("=", 1)[1] for arg in unknown if arg.startswith("--cap-add=")]
+    if caps:
+        service["cap_add"] = caps
+    # Unraid has no AppArmor. ZimaOS and CasaOS confine containers with
+    # Docker's profile, which forbids mounts even with SYS_ADMIN.
+    if "security_opt" in overrides:
+        service["security_opt"] = overrides["security_opt"]
     # Every Selkies desktop listens on 3000 and 3001, and ZimaOS refuses a
     # second app on a host port that is taken, so each gets its own pair.
     if "ports" in overrides:

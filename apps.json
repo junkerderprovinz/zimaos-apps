@@ -18,6 +18,14 @@
     "paths": {"/storage": "/DATA"},
     "ports": {"3000": 32000, "3001": 32001}
   },
+  "cannoncommander": {
+    "category": "Productivity",
+    "paths": {"/mnt": "/DATA"},
+    "targets": {"/mnt": "/mnt/user"},
+    "drop_paths": ["/var/local/emhttp", "/boot/config"],
+    "security_opt": ["apparmor:unconfined"],
+    "tip": "On the first start the container writes a password for the user admin into its log. Sign in with it and pick your own."
+  },
   "castleparcel": {
     "category": "Productivity",
     "name": "featherdrop"
