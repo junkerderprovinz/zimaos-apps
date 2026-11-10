@@ -49,7 +49,7 @@ Backup and full disaster recovery for containers, VMs and the flash, powered by 
 <a href="https://github.com/junkerderprovinz/castleparcel/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
 
 **CastleParcel**<br>
-Your own file transfer service: login-free, end-to-end encrypted file sharing with self-expiring share links, file requests and notes. Formerly featherdrop.
+The big-file transfer site you know, on your own server and sealed: encrypted in your browser, login-free, with self-expiring share links, file requests and notes. Formerly featherdrop.
 
 <br clear="all">
 
