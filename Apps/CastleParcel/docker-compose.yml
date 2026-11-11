@@ -28,7 +28,7 @@ x-casaos:
   tagline:
     en_US: 'The big-file transfer site you know, on your own server and sealed: encrypted in your browser, login-free, with self-expiring share links, file requests and notes. Formerly featherdrop.'
   description:
-    en_US: CastleParcel is a self-hosted file sharer for big files, like the transfer site everyone already knows, minus the accounts, the size paywalls and someone else's cloud, and sealed so that not even your own server can read what you send. Open the page, drop a file, set an expiry (plus an optional password or download limit), and share a short link or QR code. Files are end-to-end encrypted in your browser before upload, so the server only stores ciphertext and never sees your files, their names or the key. Uploads are resumable (tus), files sit on a local volume and the metadata lives in a single SQLite file, so there is no separate database, no account system and no tracking. The UI comes in 26 languages with light and dark mode, and you can brand it with APP_NAME, APP_LOGO and ACCENT_COLOR. Put it behind a reverse proxy and set BASE_URL so share links use your public domain. CastleParcel used to be called featherdrop. The appdata folder keeps that name, so an existing install
+    en_US: CastleParcel is a self-hosted file sharer for big files, like the transfer site everyone already knows, minus the accounts, the size paywalls and someone else's cloud, and sealed so that not even your own server can read what you send. Open the page, drop a file, set an expiry (plus an optional password or download limit), and share a short link or QR code. Files are end-to-end encrypted in your browser before upload, so the server only stores ciphertext and never sees your files, their names or the key. Uploads are resumable (tus), files sit on a local volume and the metadata lives in a single SQLite file, so there is no separate database, no account system and no tracking. The UI comes in 42 languages with light and dark mode, and you can brand it with APP_NAME, APP_LOGO and ACCENT_COLOR. Put it behind a reverse proxy and set BASE_URL so share links use your public domain. CastleParcel used to be called featherdrop. The appdata folder keeps that name, so an existing install
       keeps its shares and every link still opens.
   icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/CastleParcel/icon.png
   category: Productivity
@@ -37,6 +37,6 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 2.0.0
+  version: 2.1.0
   repo: https://github.com/junkerderprovinz/castleparcel
   support: https://github.com/junkerderprovinz/castleparcel/issues
