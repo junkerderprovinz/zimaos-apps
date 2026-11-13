@@ -43,7 +43,7 @@ x-casaos:
   architectures:
   - amd64
   - arm64
-  version: 1.1.2
+  version: 1.1.3
   tips:
     before_install:
       en_US: On the first start the container writes a password for the user admin into its log. Sign in with it and pick your own.
