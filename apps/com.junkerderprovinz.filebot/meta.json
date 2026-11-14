@@ -1,0 +1,25 @@
+{
+  "tagline": "The FileBot media renamer in your browser on a fast Selkies web desktop, dark from the first start. Bring your own FileBot license.",
+  "description": "FileBot, the renamer for movies, shows, anime and music, on a Selkies web desktop. The full FileBot desktop app runs in the container and streams to your browser as H.264 video, so you need no VNC client and no local install. Built for amd64 and arm64.",
+  "category": "Media",
+  "author": "Junker der Provinz",
+  "developer": "Reinhard Pointner",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/filebot",
+  "support": "https://github.com/junkerderprovinz/filebot/issues",
+  "title": "FileBot",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.filebot",
+  "version": "1.0.2",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1087635906,
+    "arm64": 1048320097
+  }
+}

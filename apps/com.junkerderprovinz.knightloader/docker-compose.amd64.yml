@@ -1,0 +1,24 @@
+name: knightloader
+services:
+  knightloader:
+    image: junkerderprovinz/knightloader:latest@sha256:7a58cfffbc32930f42a6e5c10dcbdd4d4eb0d2f951e355516e39568ecc064d0b
+    container_name: knightloader
+    restart: unless-stopped
+    ports:
+      - 8749:8749
+    volumes:
+      - /DATA/AppData/$AppID:/data
+      - /DATA/Downloads:/data/downloads
+      - /DATA/AppData/$AppID/user:/mnt/user
+    environment:
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.knightloader
+  main: knightloader
+  index: /
+  port_map: '8749'
+  scheme: http
+  title:
+    en_US: KnightLoader
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.knightloader/assets/icon.png
+  version: 2.8.3

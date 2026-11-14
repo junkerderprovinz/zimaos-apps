@@ -1,0 +1,33 @@
+{
+  "tagline": "Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.",
+  "description": "Fast, S3-API-compatible object store on the official image, the actively-maintained alternative now that MinIO's open edition is done.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Chris Lu",
+  "architectures": [
+    "386",
+    "amd64",
+    "arm",
+    "arm64",
+    "ppc64le",
+    "s390x"
+  ],
+  "repo": "https://github.com/junkerderprovinz/unraid-apps/blob/main/seaweedfs/README.md",
+  "support": "https://github.com/junkerderprovinz/unraid-apps/issues",
+  "title": "SeaweedFS",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.seaweedfs",
+  "version": "4.53.0",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "386": 97042646,
+    "amd64": 281716761,
+    "arm": 94659645,
+    "arm64": 270606598,
+    "ppc64le": 95098640,
+    "s390x": 100028388
+  }
+}

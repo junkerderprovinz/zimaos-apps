@@ -1,0 +1,36 @@
+name: cannoncommander
+services:
+  cannoncommander:
+    image: junkerderprovinz/cannoncommander:latest@sha256:0b04084a4c83050fb8b62a328aeee97b14a2b82b50b0d07fb39c72235d35ead0
+    container_name: cannoncommander
+    restart: unless-stopped
+    hostname: cannoncommander
+    ports:
+      - 8480:80
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/mnt/user
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+      TZ: $TZ
+      CC_UNRAID_SOCKET: 'false'
+    devices:
+      - /dev/fuse
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
+      - DAC_OVERRIDE
+    security_opt:
+      - apparmor:unconfined
+x-casaos:
+  id: com.junkerderprovinz.cannoncommander
+  main: cannoncommander
+  index: /
+  port_map: '8480'
+  scheme: http
+  title:
+    en_US: CannonCommander
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.cannoncommander/assets/icon.png
+  version: 1.1.3

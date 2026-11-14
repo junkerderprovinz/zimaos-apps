@@ -1,0 +1,29 @@
+name: featherdrop
+services:
+  castleparcel:
+    image: junkerderprovinz/castleparcel:latest@sha256:033214ae7089d94d85fb00d73a9ca96d5be94cb719334729a81659fe00f63441
+    container_name: castleparcel
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+      - /DATA/AppData/$AppID/config:/config
+    environment:
+      CONFIG_DIR: /config
+      DEFAULT_EXPIRY: 7d
+      MAX_FILE_SIZE: '0'
+      MAX_EXPIRY: never
+      STORAGE_QUOTA: '0'
+      RATE_LIMIT: 'true'
+      TRUST_PROXY: 'false'
+x-casaos:
+  id: com.junkerderprovinz.castleparcel
+  main: castleparcel
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: CastleParcel
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.castleparcel/assets/icon.png
+  version: 2.1.2

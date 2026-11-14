@@ -1,0 +1,28 @@
+name: filmcraft
+services:
+  filmcraft:
+    image: junkerderprovinz/filmcraft:latest@sha256:4500113da8d0202a4a97244f4dfd0a2a5eea80760a3e6dda6f488d51c1d0691e
+    container_name: filmcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32051:3001
+      - 32050:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.filmcraft
+  main: filmcraft
+  index: /
+  port_map: '32051'
+  scheme: https
+  title:
+    en_US: FilmCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.filmcraft/assets/icon.png
+  version: 1.1.2

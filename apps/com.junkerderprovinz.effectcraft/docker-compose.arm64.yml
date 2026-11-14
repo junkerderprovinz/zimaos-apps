@@ -1,0 +1,28 @@
+name: effectcraft
+services:
+  effectcraft:
+    image: junkerderprovinz/effectcraft:latest@sha256:354e783d7c3f38089e9a5c973539d84c9928c6df0eb0173e5d19e29965d711f8
+    container_name: effectcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32031:3001
+      - 32030:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+x-casaos:
+  id: com.junkerderprovinz.effectcraft
+  main: effectcraft
+  index: /
+  port_map: '32031'
+  scheme: https
+  title:
+    en_US: EffectCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.effectcraft/assets/icon.png
+  version: 1.1.2
