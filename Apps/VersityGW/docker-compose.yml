@@ -23,6 +23,7 @@ services:
       VGW_IAM_DIR: /config
       VGW_REGION: us-east-1
       VGW_HEALTH: /_health
+      VGW_DISABLE_OTMP: 'false'
 x-casaos:
   id: com.junkerderprovinz.versitygw
   main: versitygw
