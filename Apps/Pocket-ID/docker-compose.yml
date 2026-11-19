@@ -1,0 +1,47 @@
+name: pocket-id-jdp
+services:
+  pocket-id:
+    image: pocketid/pocket-id:v2
+    container_name: pocket-id
+    restart: unless-stopped
+    ports:
+    - 1411:1411
+    volumes:
+    - /DATA/AppData/$AppID:/app/data
+    environment:
+      APP_URL: https://id.example.com
+      ENCRYPTION_KEY: ''
+      TRUST_PROXY: 'false'
+      PUID: $PUID
+      PGID: $PGID
+      CLOUDFLARE_LOCATION_HEADERS: 'false'
+      AUDIT_LOG_RETENTION_DAYS: '90'
+      UI_CONFIG_DISABLED: 'false'
+      ANALYTICS_DISABLED: 'false'
+      VERSION_CHECK_DISABLED: 'false'
+      LOG_LEVEL: info
+x-casaos:
+  id: com.junkerderprovinz.pocket-id
+  main: pocket-id
+  index: /
+  port_map: '1411'
+  scheme: http
+  title:
+    en_US: Pocket-ID
+  tagline:
+    en_US: Passkey login for every app on your server that speaks OpenID Connect, with users, groups and an audit log, on SQLite or PostgreSQL.
+  description:
+    en_US: 'A small OpenID Connect provider that signs people in with passkeys instead of passwords. Put it in front of the apps on your server that support OIDC login, from the photo library to the dashboards, and all of them share one login: a fingerprint, a face or a security key. Nobody has a password left to reuse or leak.'
+  icon: https://cdn.jsdelivr.net/gh/junkerderprovinz/zimaos-apps@main/Apps/Pocket-ID/icon.png
+  category: Others
+  author: Junker der Provinz
+  developer: Pocket ID
+  architectures:
+  - amd64
+  - arm64
+  version: 2.19.3
+  tips:
+    before_install:
+      en_US: 'Set APP_URL, ENCRYPTION_KEY under Custom Installation before the first start. Generate ENCRYPTION_KEY with openssl rand -base64 32 and keep a copy: without it the stored data cannot be read. Passkeys need HTTPS, so APP_URL is the address of the reverse proxy in front of Pocket ID.'
+  repo: https://github.com/junkerderprovinz/unraid-apps/blob/main/pocket-id/README.md
+  support: https://github.com/junkerderprovinz/unraid-apps/issues

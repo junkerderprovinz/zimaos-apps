@@ -134,6 +134,12 @@
     "paths": {"/storage": "/DATA"},
     "ports": {"3000": 32120, "3001": 32121}
   },
+  "pocket-id": {
+    "name": "pocket-id-jdp",
+    "category": "Others",
+    "developer": "Pocket ID",
+    "tip": "Generate ENCRYPTION_KEY with openssl rand -base64 32 and keep a copy: without it the stored data cannot be read. Passkeys need HTTPS, so APP_URL is the address of the reverse proxy in front of Pocket ID."
+  },
   "prusaslicer": {
     "category": "Others",
     "developer": "Prusa Research",
