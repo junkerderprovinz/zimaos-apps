@@ -1,26 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests",
-    ":semanticCommits",
-    ":dependencyDashboard",
-    ":enableVulnerabilityAlertsWithLabel(security)"
+    "local>junkerderprovinz/junkerderprovinz//renovate/base"
   ],
-  "timezone": "Europe/Vienna",
-  "schedule": ["before 6am on monday"],
-  "labels": ["dependencies"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 6,
   "packageRules": [
     {
-      "description": "GitHub Actions: auto-merge minor, patch and digest updates",
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "automerge": true,
-      "automergeType": "branch",
-      "commitMessagePrefix": "ci:",
-      "labels": ["github-actions"]
+      "description": "The compose files are rebuilt from unraid-apps and stay on :latest like the Unraid templates. A digest would freeze every install on one build, and the next rebuild would drop it anyway.",
+      "matchManagers": ["docker-compose"],
+      "enabled": false
     }
   ]
 }
