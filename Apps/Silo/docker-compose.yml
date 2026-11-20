@@ -12,6 +12,15 @@ services:
     environment:
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: casaos1234
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: Silo
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/silo/icon.png
+      homepage.description: S3 object store with a web console
+      glance.name: Silo
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/silo/icon.png
+      glance.description: S3 object store with a web console
     command: server /data --console-address ":9001"
 x-casaos:
   id: com.junkerderprovinz.silo

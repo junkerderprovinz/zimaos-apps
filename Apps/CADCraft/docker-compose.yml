@@ -16,6 +16,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: CADCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cadcraft/icon.png
+      homepage.description: 2D drafting with DXF and DWG in the browser
+      glance.name: CADCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cadcraft/icon.png
+      glance.description: 2D drafting with DXF and DWG in the browser
 x-casaos:
   id: com.junkerderprovinz.cadcraft
   main: cadcraft

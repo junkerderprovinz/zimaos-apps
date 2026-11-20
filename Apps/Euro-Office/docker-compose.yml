@@ -16,6 +16,15 @@ services:
       JWT_ENABLED: 'true'
       USE_UNAUTHORIZED_STORAGE: 'true'
       ONLYOFFICE_HTTPS_HSTS_ENABLED: 'true'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Euro-Office
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/euro-office/icon.png?v=3
+      homepage.description: Edit office documents in the browser
+      glance.name: Euro-Office
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/euro-office/icon.png?v=3
+      glance.description: Edit office documents in the browser
 x-casaos:
   id: com.junkerderprovinz.euro-office
   main: euro-office

@@ -23,6 +23,15 @@ services:
       REDIS_PORT: '6379'
       OFFICE: 'off'
       ENABLE_SEADOC: 'false'
+    labels:
+      homepage.href: ''
+      homepage.group: Cloud
+      homepage.name: Seafile
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seafile/icon.png
+      homepage.description: File sync and share
+      glance.name: Seafile
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seafile/icon.png
+      glance.description: File sync and share
 x-casaos:
   id: com.junkerderprovinz.seafile
   main: seafile

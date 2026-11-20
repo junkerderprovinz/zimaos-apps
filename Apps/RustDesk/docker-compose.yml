@@ -24,6 +24,15 @@ services:
       MUST_LOGIN: N
       RUSTDESK_API_LANG: en
       TZ: $TZ
+    labels:
+      homepage.href: ''
+      homepage.group: Network
+      homepage.name: RustDesk
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustdesk/icon.png?v=2
+      homepage.description: Remote desktop server with a web console
+      glance.name: RustDesk
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustdesk/icon.png?v=2
+      glance.description: Remote desktop server with a web console
 x-casaos:
   id: com.junkerderprovinz.rustdesk
   main: rustdesk

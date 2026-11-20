@@ -19,6 +19,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: Krusader
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/krusader/icon.png
+      homepage.description: Twin-pane file manager on a web desktop
+      glance.name: Krusader
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/krusader/icon.png
+      glance.description: Twin-pane file manager on a web desktop
 x-casaos:
   id: com.junkerderprovinz.krusader
   main: krusader

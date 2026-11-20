@@ -25,6 +25,15 @@ services:
       LOCAL_AUTH_ENABLED: 'true'
       PUID: $PUID
       PGID: $PGID
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Securo
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/securo/icon.png
+      homepage.description: Personal finance manager
+      glance.name: Securo
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/securo/icon.png
+      glance.description: Personal finance manager
 x-casaos:
   id: com.junkerderprovinz.securo
   main: securo

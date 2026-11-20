@@ -21,6 +21,15 @@ services:
       LIBVIRT_SSH_USER: root
       PLATFORM: generic
       DATA_ROOT_SEGMENTS: AppData
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: BombVault
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/bombvault/main/.github/assets/icon.png?v=6
+      homepage.description: Backup and disaster recovery for containers and VMs
+      glance.name: BombVault
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/bombvault/main/.github/assets/icon.png?v=6
+      glance.description: Backup and disaster recovery for containers and VMs
     extra_hosts:
     - host.docker.internal:host-gateway
 x-casaos:

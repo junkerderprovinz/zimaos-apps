@@ -16,6 +16,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: EffectCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/effectcraft/icon.png
+      homepage.description: Motion graphics with keyframes and effects
+      glance.name: EffectCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/effectcraft/icon.png
+      glance.description: Motion graphics with keyframes and effects
 x-casaos:
   id: com.junkerderprovinz.effectcraft
   main: effectcraft

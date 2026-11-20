@@ -16,6 +16,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: GridCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/gridcraft/icon.png
+      homepage.description: Spreadsheets with formulas and charts
+      glance.name: GridCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/gridcraft/icon.png
+      glance.description: Spreadsheets with formulas and charts
 x-casaos:
   id: com.junkerderprovinz.gridcraft
   main: gridcraft

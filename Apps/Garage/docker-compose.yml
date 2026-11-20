@@ -15,6 +15,15 @@ services:
       DB_ENGINE: sqlite
       PUID: $PUID
       PGID: $PGID
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: Garage
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/garage/icon.png?v=3
+      homepage.description: S3-compatible object store with a web admin
+      glance.name: Garage
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/garage/icon.png?v=3
+      glance.description: S3-compatible object store with a web admin
 x-casaos:
   id: com.junkerderprovinz.garage
   main: garage

@@ -12,6 +12,15 @@ services:
     environment:
       COUCHDB_USER: admin
       COUCHDB_PASSWORD: casaos
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: CouchDB
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/couchdb/icon.png?v=2
+      homepage.description: Document database over HTTP and JSON
+      glance.name: CouchDB
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/couchdb/icon.png?v=2
+      glance.description: Document database over HTTP and JSON
 x-casaos:
   id: com.junkerderprovinz.couchdb
   main: couchdb

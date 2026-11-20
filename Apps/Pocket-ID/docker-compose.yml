@@ -20,6 +20,15 @@ services:
       ANALYTICS_DISABLED: 'false'
       VERSION_CHECK_DISABLED: 'false'
       LOG_LEVEL: info
+    labels:
+      homepage.href: ''
+      homepage.group: Security
+      homepage.name: Pocket ID
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pocket-id/icon.png
+      homepage.description: Passkey login for your apps
+      glance.name: Pocket ID
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pocket-id/icon.png
+      glance.description: Passkey login for your apps
 x-casaos:
   id: com.junkerderprovinz.pocket-id
   main: pocket-id

@@ -16,6 +16,15 @@ services:
       UMASK: '022'
       TZ: $TZ
       CC_UNRAID_SOCKET: 'false'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: CannonCommander
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cannoncommander/icon.png?v=2
+      homepage.description: Two-panel file manager
+      glance.name: CannonCommander
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cannoncommander/icon.png?v=2
+      glance.description: Two-panel file manager
     devices:
     - /dev/fuse
     cap_add:

@@ -16,6 +16,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: FilmCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      homepage.description: Video editor in the browser
+      glance.name: FilmCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      glance.description: Video editor in the browser
 x-casaos:
   id: com.junkerderprovinz.filmcraft
   main: filmcraft

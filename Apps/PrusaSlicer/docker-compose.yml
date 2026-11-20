@@ -16,6 +16,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: PrusaSlicer
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      homepage.description: 3D-printing slicer in the browser
+      glance.name: PrusaSlicer
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      glance.description: 3D-printing slicer in the browser
 x-casaos:
   id: com.junkerderprovinz.prusaslicer
   main: prusaslicer

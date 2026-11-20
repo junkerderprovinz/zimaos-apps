@@ -19,6 +19,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Downloads
+      homepage.name: JDownloader
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/jdownloader/icon.png
+      homepage.description: Download manager on a web desktop
+      glance.name: JDownloader
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/jdownloader/icon.png
+      glance.description: Download manager on a web desktop
 x-casaos:
   id: com.junkerderprovinz.jdownloader
   main: jdownloader

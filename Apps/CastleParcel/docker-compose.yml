@@ -17,6 +17,15 @@ services:
       STORAGE_QUOTA: '0'
       RATE_LIMIT: 'true'
       TRUST_PROXY: 'false'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: CastleParcel
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/castleparcel/icon.png?v=2
+      homepage.description: Encrypted big-file transfers and share links
+      glance.name: CastleParcel
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/castleparcel/icon.png?v=2
+      glance.description: Encrypted big-file transfers and share links
 x-casaos:
   id: com.junkerderprovinz.castleparcel
   main: castleparcel

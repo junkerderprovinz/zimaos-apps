@@ -37,6 +37,15 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: HandBrake
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/handbrake/icon.png
+      homepage.description: Video converter with a watch folder
+      glance.name: HandBrake
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/handbrake/icon.png
+      glance.description: Video converter with a watch folder
 x-casaos:
   id: com.junkerderprovinz.handbrake
   main: handbrake
