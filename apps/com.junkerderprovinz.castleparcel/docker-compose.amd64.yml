@@ -1,0 +1,38 @@
+name: featherdrop
+services:
+  castleparcel:
+    image: junkerderprovinz/castleparcel:latest@sha256:d834489eaa9e5a0460867e655817e0ede64a98d1902368941614eaf1fcb0c561
+    container_name: castleparcel
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+      - /DATA/AppData/$AppID/config:/config
+    environment:
+      CONFIG_DIR: /config
+      DEFAULT_EXPIRY: 7d
+      MAX_FILE_SIZE: '0'
+      MAX_EXPIRY: never
+      STORAGE_QUOTA: '0'
+      RATE_LIMIT: 'true'
+      TRUST_PROXY: 'false'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: CastleParcel
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/castleparcel/icon.png?v=2
+      homepage.description: Encrypted big-file transfers and share links
+      glance.name: CastleParcel
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/castleparcel/icon.png?v=2
+      glance.description: Encrypted big-file transfers and share links
+x-casaos:
+  id: com.junkerderprovinz.castleparcel
+  main: castleparcel
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: CastleParcel
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.castleparcel/assets/icon.png
+  version: 2.1.3

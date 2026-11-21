@@ -1,0 +1,45 @@
+name: rustdesk
+services:
+  rustdesk:
+    image: junkerderprovinz/rustdesk:latest@sha256:8197d958ded42f8f0c2b9d8bc05854fc82455bf4bf760c62a4c88117d623fa87
+    container_name: rustdesk
+    restart: unless-stopped
+    ports:
+      - 21114:21114
+      - 21115:21115
+      - 21116:21116
+      - 21116:21116/udp
+      - 21117:21117
+      - 21118:21118
+      - 21119:21119
+    volumes:
+      - /DATA/AppData/$AppID:/data
+      - /DATA/AppData/$AppID/api:/app/data
+    environment:
+      RELAY: ''
+      RUSTDESK_API_RUSTDESK_ID_SERVER: ''
+      RUSTDESK_API_RUSTDESK_RELAY_SERVER: ''
+      RUSTDESK_API_RUSTDESK_API_SERVER: ''
+      ENCRYPTED_ONLY: '1'
+      MUST_LOGIN: N
+      RUSTDESK_API_LANG: en
+      TZ: $TZ
+    labels:
+      homepage.href: ''
+      homepage.group: Network
+      homepage.name: RustDesk
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustdesk/icon.png?v=2
+      homepage.description: Remote desktop server with a web console
+      glance.name: RustDesk
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustdesk/icon.png?v=2
+      glance.description: Remote desktop server with a web console
+x-casaos:
+  id: com.junkerderprovinz.rustdesk
+  main: rustdesk
+  index: /_admin/
+  port_map: '21114'
+  scheme: http
+  title:
+    en_US: RustDesk
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.rustdesk/assets/icon.png
+  version: 1.0.2

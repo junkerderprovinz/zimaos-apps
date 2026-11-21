@@ -1,0 +1,46 @@
+name: securo
+services:
+  securo:
+    image: junkerderprovinz/securo:latest@sha256:a684e588b014db87a7e2bfa1cf9768ae58d10bde0f226e059c83e230ccb3bfe5
+    container_name: securo
+    restart: unless-stopped
+    ports:
+      - 3000:8080
+    volumes:
+      - /DATA/AppData/$AppID:/data
+    environment:
+      BUILTIN_POSTGRES: 'true'
+      POSTGRES_USER: postgres
+      BUILTIN_REDIS: 'true'
+      REGISTRATION_ENABLED: 'true'
+      POSTGRES_PORT: '5432'
+      POSTGRES_DB: securo
+      REDIS_PORT: '6379'
+      REDIS_DB: '0'
+      TRUSTED_PROXY_HOPS: '1'
+      SIMPLEFIN_ENABLED: 'false'
+      SIMPLEFIN_API_URL: https://beta-bridge.simplefin.org
+      OIDC_ENABLED: 'false'
+      OIDC_PROVIDER_NAME: OIDC
+      LOCAL_AUTH_ENABLED: 'true'
+      PUID: $PUID
+      PGID: $PGID
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Securo
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/securo/icon.png
+      homepage.description: Personal finance manager
+      glance.name: Securo
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/securo/icon.png
+      glance.description: Personal finance manager
+x-casaos:
+  id: com.junkerderprovinz.securo
+  main: securo
+  index: /
+  port_map: '3000'
+  scheme: http
+  title:
+    en_US: Securo
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.securo/assets/icon.png
+  version: 1.1.1

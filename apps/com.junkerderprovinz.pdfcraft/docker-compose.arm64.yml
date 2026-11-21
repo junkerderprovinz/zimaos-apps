@@ -1,0 +1,37 @@
+name: pdfcraft
+services:
+  pdfcraft:
+    image: junkerderprovinz/pdfcraft:latest@sha256:1dbf94457e045be7c9bbd365613049b644b9f3b828b80d9d9d56b9e2d938e969
+    container_name: pdfcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32111:3001
+      - 32110:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: PdfCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pdfcraft/icon.png
+      homepage.description: Read, edit, sign and OCR PDFs
+      glance.name: PdfCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/pdfcraft/icon.png
+      glance.description: Read, edit, sign and OCR PDFs
+x-casaos:
+  id: com.junkerderprovinz.pdfcraft
+  main: pdfcraft
+  index: /
+  port_map: '32111'
+  scheme: https
+  title:
+    en_US: PdfCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.pdfcraft/assets/icon.png
+  version: 1.1.2

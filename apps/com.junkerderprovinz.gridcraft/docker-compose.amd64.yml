@@ -1,0 +1,37 @@
+name: gridcraft
+services:
+  gridcraft:
+    image: junkerderprovinz/gridcraft:latest@sha256:9062dc4e419154b133affa5a04f4fa6e20699f06ee80551d9c43ea58ecb234ac
+    container_name: gridcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32061:3001
+      - 32060:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: GridCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/gridcraft/icon.png
+      homepage.description: Spreadsheets with formulas and charts
+      glance.name: GridCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/gridcraft/icon.png
+      glance.description: Spreadsheets with formulas and charts
+x-casaos:
+  id: com.junkerderprovinz.gridcraft
+  main: gridcraft
+  index: /
+  port_map: '32061'
+  scheme: https
+  title:
+    en_US: GridCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.gridcraft/assets/icon.png
+  version: 1.1.2

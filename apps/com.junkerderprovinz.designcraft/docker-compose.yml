@@ -1,0 +1,37 @@
+name: designcraft
+services:
+  designcraft:
+    image: junkerderprovinz/designcraft:latest
+    container_name: designcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32021:3001
+      - 32020:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: DesignCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/designcraft/icon.png
+      homepage.description: Page layout for magazines and flyers
+      glance.name: DesignCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/designcraft/icon.png
+      glance.description: Page layout for magazines and flyers
+x-casaos:
+  id: com.junkerderprovinz.designcraft
+  main: designcraft
+  index: /
+  port_map: '32021'
+  scheme: https
+  title:
+    en_US: DesignCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.designcraft/assets/icon.png
+  version: 1.1.2

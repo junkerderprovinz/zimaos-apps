@@ -1,0 +1,36 @@
+name: stellarium
+services:
+  stellarium:
+    image: junkerderprovinz/stellarium:latest@sha256:269a7bbc089e970707eec48cabbc099ba5edeb0ba431e59190ba7a8cf044a047
+    container_name: stellarium
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32151:3001
+      - 32150:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: Stellarium
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/stellarium/icon.png
+      homepage.description: Planetarium in the browser
+      glance.name: Stellarium
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/stellarium/icon.png
+      glance.description: Planetarium in the browser
+x-casaos:
+  id: com.junkerderprovinz.stellarium
+  main: stellarium
+  index: /
+  port_map: '32151'
+  scheme: https
+  title:
+    en_US: Stellarium
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.stellarium/assets/icon.png
+  version: 1.2.2

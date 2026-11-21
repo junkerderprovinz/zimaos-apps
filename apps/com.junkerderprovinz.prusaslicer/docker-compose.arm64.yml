@@ -1,0 +1,37 @@
+name: prusaslicer
+services:
+  prusaslicer:
+    image: junkerderprovinz/prusaslicer:latest@sha256:47e55766a67510d314c40f219b3520790cb0d08e4fb187cf9cb5ef9b9a9ef352
+    container_name: prusaslicer
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32131:3001
+      - 32130:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: PrusaSlicer
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      homepage.description: 3D-printing slicer in the browser
+      glance.name: PrusaSlicer
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/prusaslicer/icon.png?v=3
+      glance.description: 3D-printing slicer in the browser
+x-casaos:
+  id: com.junkerderprovinz.prusaslicer
+  main: prusaslicer
+  index: /
+  port_map: '32131'
+  scheme: https
+  title:
+    en_US: PrusaSlicer
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.prusaslicer/assets/icon.png
+  version: 1.2.2

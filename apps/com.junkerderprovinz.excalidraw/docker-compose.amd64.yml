@@ -1,0 +1,34 @@
+name: excalidraw-jdp
+services:
+  excalidraw:
+    image: junkerderprovinz/excalidraw:latest@sha256:848f6f3e199e906f82a5110935072ab18d53e7d1bc2fab762e15249fe16ee1c7
+    container_name: excalidraw
+    restart: unless-stopped
+    ports:
+      - 8443:443
+      - 8080:80
+    volumes:
+      - /DATA/AppData/$AppID:/config
+    environment:
+      ENABLE_LIBRARY: 'false'
+      ENABLE_AI: 'false'
+      TZ: $TZ
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Excalidraw
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/excalidraw/icon.png?v=2
+      homepage.description: Hand-drawn whiteboard with live collaboration
+      glance.name: Excalidraw
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/excalidraw/icon.png?v=2
+      glance.description: Hand-drawn whiteboard with live collaboration
+x-casaos:
+  id: com.junkerderprovinz.excalidraw
+  main: excalidraw
+  index: /
+  port_map: '8443'
+  scheme: https
+  title:
+    en_US: Excalidraw
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.excalidraw/assets/icon.png
+  version: 1.0.2

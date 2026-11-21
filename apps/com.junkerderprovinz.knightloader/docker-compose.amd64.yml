@@ -1,0 +1,33 @@
+name: knightloader
+services:
+  knightloader:
+    image: junkerderprovinz/knightloader:latest@sha256:a9614e31f64fb2630dc0f9b39722eb0e98295b9d7d1ecdef186cec0c3052443d
+    container_name: knightloader
+    restart: unless-stopped
+    ports:
+      - 8749:8749
+    volumes:
+      - /DATA/AppData/$AppID:/data
+      - /DATA/Downloads:/data/downloads
+      - /DATA/AppData/$AppID/user:/mnt/user
+    environment:
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Downloads
+      homepage.name: KnightLoader
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/knightloader/icon.png?v=4
+      homepage.description: Download manager for hosters, torrents and Usenet
+      glance.name: KnightLoader
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/knightloader/icon.png?v=4
+      glance.description: Download manager for hosters, torrents and Usenet
+x-casaos:
+  id: com.junkerderprovinz.knightloader
+  main: knightloader
+  index: /
+  port_map: '8749'
+  scheme: http
+  title:
+    en_US: KnightLoader
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.knightloader/assets/icon.png
+  version: 2.9.4

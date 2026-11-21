@@ -1,0 +1,37 @@
+name: figcraft
+services:
+  figcraft:
+    image: junkerderprovinz/figcraft:latest@sha256:61faf0dace78f4c48cb61d15d5aadd905e2a3e936c038864c84b3075b66d70a2
+    container_name: figcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32041:3001
+      - 32040:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: FigCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/figcraft/icon.png
+      homepage.description: Interface design and clickable prototypes
+      glance.name: FigCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/figcraft/icon.png
+      glance.description: Interface design and clickable prototypes
+x-casaos:
+  id: com.junkerderprovinz.figcraft
+  main: figcraft
+  index: /
+  port_map: '32041'
+  scheme: https
+  title:
+    en_US: FigCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.figcraft/assets/icon.png
+  version: 1.1.2

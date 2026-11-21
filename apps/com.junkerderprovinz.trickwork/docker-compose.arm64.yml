@@ -1,0 +1,29 @@
+name: trickwork
+services:
+  trickwork:
+    image: ghcr.io/junkerderprovinz/trickwork:latest@sha256:e7b53661834a7051b08f32f72c4d4fff991bdb943b000b1be9d5b6e2a17fe506
+    container_name: trickwork
+    restart: unless-stopped
+    ports:
+      - 3210:3210
+    environment:
+      PORT: '3210'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: TrickWork
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/trickwork/icon.png?v=5
+      homepage.description: Turns images into ASCII art
+      glance.name: TrickWork
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/trickwork/icon.png?v=5
+      glance.description: Turns images into ASCII art
+x-casaos:
+  id: com.junkerderprovinz.trickwork
+  main: trickwork
+  index: /
+  port_map: '3210'
+  scheme: http
+  title:
+    en_US: TrickWork
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.trickwork/assets/icon.png
+  version: 1.8.0

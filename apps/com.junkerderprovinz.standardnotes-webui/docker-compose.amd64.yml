@@ -1,0 +1,27 @@
+name: standardnotes-webui
+services:
+  standardnotes-webui:
+    image: standardnotes/web:latest@sha256:7a99c571c73d58a23a6f84a27eb53f7768ba087cbc06dd152c9fa310e02c2f0c
+    container_name: standardnotes-webui
+    restart: unless-stopped
+    ports:
+      - 3001:80
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Standard Notes
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/standardnotes-webui/icon.png
+      homepage.description: Web client for encrypted notes
+      glance.name: Standard Notes
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/standardnotes-webui/icon.png
+      glance.description: Web client for encrypted notes
+x-casaos:
+  id: com.junkerderprovinz.standardnotes-webui
+  main: standardnotes-webui
+  index: /
+  port_map: '3001'
+  scheme: http
+  title:
+    en_US: StandardNotes-WebUI
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.standardnotes-webui/assets/icon.png
+  version: 2026.11.12

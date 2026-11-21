@@ -1,0 +1,40 @@
+name: jdownloader
+services:
+  jdownloader:
+    image: junkerderprovinz/jdownloader:latest@sha256:005a0d4bde6e45b7f51fe62f675602830690be0d66353aa60beb4f258a331e2c
+    container_name: jdownloader
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32080:3000
+      - 32081:3001
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA/Downloads:/downloads
+    environment:
+      JD_THEME: jd-highlighter-dark
+      JD_SELFUPDATE: 'true'
+      JD_ENABLE_BROWSER: auto
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Downloads
+      homepage.name: JDownloader
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/jdownloader/icon.png
+      homepage.description: Download manager on a web desktop
+      glance.name: JDownloader
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/jdownloader/icon.png
+      glance.description: Download manager on a web desktop
+x-casaos:
+  id: com.junkerderprovinz.jdownloader
+  main: jdownloader
+  index: /
+  port_map: '32081'
+  scheme: https
+  title:
+    en_US: JDownloader
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.jdownloader/assets/icon.png
+  version: 4.9.5

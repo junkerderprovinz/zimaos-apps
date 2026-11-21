@@ -1,0 +1,37 @@
+name: euro-office
+services:
+  euro-office:
+    image: ghcr.io/junkerderprovinz/euro-office:latest@sha256:a66e71d2a27a9a7a24e20dac63f89bc0d713417250077c9ecd71d378df558207
+    container_name: euro-office
+    restart: unless-stopped
+    ports:
+      - 9900:80
+      - 9943:443
+    volumes:
+      - /DATA/AppData/$AppID/data:/var/www/euro-office/Data
+      - /DATA/AppData/$AppID/certs:/certs:ro
+    environment:
+      JWT_SECRET: casaos
+      WOPI_ENABLED: 'true'
+      JWT_ENABLED: 'true'
+      USE_UNAUTHORIZED_STORAGE: 'true'
+      ONLYOFFICE_HTTPS_HSTS_ENABLED: 'true'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: Euro-Office
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/euro-office/icon.png?v=3
+      homepage.description: Edit office documents in the browser
+      glance.name: Euro-Office
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/euro-office/icon.png?v=3
+      glance.description: Edit office documents in the browser
+x-casaos:
+  id: com.junkerderprovinz.euro-office
+  main: euro-office
+  index: /
+  port_map: '9900'
+  scheme: http
+  title:
+    en_US: Euro-Office
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.euro-office/assets/icon.png
+  version: 1.2.1

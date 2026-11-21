@@ -1,0 +1,37 @@
+name: photocraft
+services:
+  photocraft:
+    image: junkerderprovinz/photocraft:latest@sha256:eec01e097c944198202063569f03f45912f53fe43577d081ac311c4739fe7ad3
+    container_name: photocraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32121:3001
+      - 32120:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: PhotoCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/photocraft/icon.png
+      homepage.description: Layered photo editor in the browser
+      glance.name: PhotoCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/photocraft/icon.png
+      glance.description: Layered photo editor in the browser
+x-casaos:
+  id: com.junkerderprovinz.photocraft
+  main: photocraft
+  index: /
+  port_map: '32121'
+  scheme: https
+  title:
+    en_US: PhotoCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.photocraft/assets/icon.png
+  version: 1.1.2

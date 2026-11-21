@@ -1,0 +1,37 @@
+name: lightcraft
+services:
+  lightcraft:
+    image: junkerderprovinz/lightcraft:latest@sha256:5ae5cae21e15f2dfb1d9da1e56deac5ec3b7b89bb1a414eaed60fcce2370f4aa
+    container_name: lightcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32101:3001
+      - 32100:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: LightCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/lightcraft/icon.png
+      homepage.description: Photo library and raw developer
+      glance.name: LightCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/lightcraft/icon.png
+      glance.description: Photo library and raw developer
+x-casaos:
+  id: com.junkerderprovinz.lightcraft
+  main: lightcraft
+  index: /
+  port_map: '32101'
+  scheme: https
+  title:
+    en_US: LightCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.lightcraft/assets/icon.png
+  version: 1.1.2

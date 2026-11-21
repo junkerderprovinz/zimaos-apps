@@ -1,0 +1,35 @@
+name: arrowloop
+services:
+  arrowloop:
+    image: junkerderprovinz/arrowloop:latest@sha256:85e63a0749e3b8a612d1af41ad4d0f4fd4100fae513c2c015a77c48ab46d7e73
+    container_name: arrowloop
+    restart: unless-stopped
+    hostname: arrowloop
+    ports:
+      - 8422:8422
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/data
+    environment:
+      TZ: $TZ
+      ARROWLOOP_ADDR: 0.0.0.0:8422
+      ARROWLOOP_UMASK: '000'
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: ArrowLoop
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/arrowloop/icon.png
+      homepage.description: Two-way file sync that shows its plan first
+      glance.name: ArrowLoop
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/arrowloop/icon.png
+      glance.description: Two-way file sync that shows its plan first
+x-casaos:
+  id: com.junkerderprovinz.arrowloop
+  main: arrowloop
+  index: /
+  port_map: '8422'
+  scheme: http
+  title:
+    en_US: ArrowLoop
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.arrowloop/assets/icon.png
+  version: 2.8.2
