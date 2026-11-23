@@ -1,16 +1,17 @@
 /**
  * The store banner, in the layout of the GitHub style guide: the ZimaOS mark on the
  * left (largest ink 400px, ink-left x=165, centred on y=250), the name to its
- * right in Bree Serif at a cap height of 110, since the ZimaOS wordmark is part
- * of an image, and one Lato claim below it. Light and dark variants for the README's
+ * right in Bree Serif Light at a cap height of 110, since the ZimaOS wordmark is part
+ * of an image, and one Bree Light claim below it. Light and dark variants for the README's
  * <picture>; the single-colour mark takes the text colour of each.
  *
  * Text is rendered at the origin and placed with a transform, because
- * opentype.js emits NaN control points for some Lato glyphs at large offsets.
- * Deps (global): opentype.js, @resvg/resvg-js.
+ * opentype.js emits NaN control points for some glyphs at large offsets.
+ * Deps (global): opentype.js, @resvg/resvg-js, and the house fonts as TTF in
+ * HOUSE_FONTS (default %LOCALAPPDATA%\halleluja-fonts).
  * Run: node .github/assets/gen-banner.mjs
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
@@ -38,18 +39,10 @@ const THEMES = [
   { suf: "-dark", bg: "#0d1117", name: "#e6edf3", claim: "#9aa4ad" },
 ];
 
-async function font(file, url) {
-  const p = join(tmpdir(), file);
-  if (!existsSync(p)) {
-    const r = await fetch(url);
-    if (!r.ok) throw new Error(`${file} ${r.status}`);
-    writeFileSync(p, Buffer.from(await r.arrayBuffer()));
-  }
-  const b = readFileSync(p);
-  return opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength));
-}
-const bree = await font("jdp-BreeSerif-Regular.ttf", "https://github.com/google/fonts/raw/main/ofl/breeserif/BreeSerif-Regular.ttf");
-const lato = await font("jdp-Lato-Regular.ttf", "https://github.com/google/fonts/raw/main/ofl/lato/Lato-Regular.ttf");
+// The house typeface is licensed, so it is read from a local folder and never committed.
+const fonts = process.env.HOUSE_FONTS ?? join(process.env.LOCALAPPDATA ?? tmpdir(), "halleluja-fonts");
+const bree = opentype.parse(readFileSync(join(fonts, "bree-serif-light.ttf")).buffer);
+const claimFont = opentype.parse(readFileSync(join(fonts, "bree-light.ttf")).buffer);
 const bbox = (vb, content) =>
   new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}">${content}</svg>`, { fitTo: { mode: "original" } }).getBBox();
 
@@ -64,11 +57,11 @@ const nb = bbox("0 0 2000 800", `<path d="${bree.getPath(NAME, 0, 500, nameSize)
 const nameH = nb.height;
 const nameD = bree.getPath(NAME, 0, 0, nameSize).toPathData(2);
 
-const claimScale = CLAIM_SIZE / lato.unitsPerEm;
-const claimAsc = lato.ascender * claimScale, claimDesc = -lato.descender * claimScale;
+const claimScale = CLAIM_SIZE / claimFont.unitsPerEm;
+const claimAsc = claimFont.ascender * claimScale, claimDesc = -claimFont.descender * claimScale;
 const top = H / 2 - (nameH + GAP_NAME_CLAIM + claimAsc + claimDesc) / 2;
 const claimBaseline = Math.round(top + nameH + GAP_NAME_CLAIM + claimAsc);
-const claimD = lato.getPath(CLAIM, 0, 0, CLAIM_SIZE, { kerning: false }).toPathData(2);
+const claimD = claimFont.getPath(CLAIM, 0, 0, CLAIM_SIZE, { kerning: false }).toPathData(2);
 if (claimD.includes("NaN")) throw new Error("claim path has NaN points");
 
 for (const t of THEMES) {
