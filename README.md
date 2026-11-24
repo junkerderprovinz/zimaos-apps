@@ -59,7 +59,7 @@ The most beautiful file manager you will ever run, and the only one you need: tw
 <a href="https://github.com/junkerderprovinz/castleparcel/blob/main/compose.yaml"><img src="https://img.shields.io/badge/Docker%20compose-1d63ed?style=for-the-badge&logo=docker&logoColor=white" align="right" alt="Docker compose file"></a>
 
 **CastleParcel**<br>
-The big-file transfer site you know, on your own server and sealed: encrypted in your browser, login-free, with self-expiring share links, file requests and notes. Formerly featherdrop.
+The big-file transfer site you know, on your own server and sealed: encrypted in your browser, with an optional owner sign-in, self-expiring share links, file requests and notes. Formerly featherdrop.
 
 <br clear="all">
 
