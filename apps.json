@@ -83,6 +83,9 @@
     "category": "Others",
     "developer": "Deuxfleurs"
   },
+  "github-runner": {
+    "category": "Developer"
+  },
   "gridcraft": {
     "category": "Productivity",
     "developer": "ArtCraft team",
