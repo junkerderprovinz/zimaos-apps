@@ -35,7 +35,7 @@ x-casaos:
   title:
     en_US: CastleParcel
   tagline:
-    en_US: 'The big-file transfer site you know, on your own server and sealed: encrypted in your browser, with an optional owner sign-in, self-expiring share links, file requests and notes. Formerly featherdrop.'
+    en_US: 'The big-file transfer site you know, on your own server and sealed: encrypted in your browser, with an optional owner sign-in, self-expiring share links, file requests and notes.'
   description:
     en_US: 'CastleParcel is a self-hosted file sharer for big files, like the transfer site everyone already knows, minus the accounts, the size paywalls and someone else''s cloud, and sealed so that not even your own server can read what you send. Open the page, drop a file, set an expiry (plus an optional password or download limit), and share a short link or QR code. Files are end-to-end encrypted in your browser before upload, so the server only stores ciphertext and never sees your files, their names or the key. Uploads are resumable (tus), files sit on a local volume and the metadata lives in a single SQLite file, so there is no separate database and no tracking. Set an owner password if you want the castle to yourself: then only you and the guests who know the upload password can send, with passkeys, two-factor and sign-in services such as Pocket ID on top. Recipients never need an account. The UI comes in 42 languages with light and dark mode, and you can brand it with APP_NAME,
       APP_LOGO and ACCENT_COLOR. Put it behind a reverse proxy and set BASE_URL so share links use your public domain. CastleParcel used to be called featherdrop. The appdata folder keeps that name, so an existing install keeps its shares and every link still opens.'
