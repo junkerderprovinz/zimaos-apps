@@ -1,0 +1,37 @@
+name: filmcraft
+services:
+  filmcraft:
+    image: junkerderprovinz/filmcraft:latest@sha256:888793c164351b191a92a649b44461d2a7100617e1b36c2ebce4e22891011f61
+    container_name: filmcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32051:3001
+      - 32050:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: FilmCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      homepage.description: Video editor in the browser
+      glance.name: FilmCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/filmcraft/icon.png
+      glance.description: Video editor in the browser
+x-casaos:
+  id: com.junkerderprovinz.filmcraft
+  main: filmcraft
+  index: /
+  port_map: '32051'
+  scheme: https
+  title:
+    en_US: FilmCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.filmcraft/assets/icon.png
+  version: 1.1.2

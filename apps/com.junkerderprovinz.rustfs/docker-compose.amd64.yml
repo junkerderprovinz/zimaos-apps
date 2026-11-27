@@ -1,0 +1,36 @@
+name: rustfs
+services:
+  rustfs:
+    image: rustfs/rustfs:latest@sha256:d56a18b722567850f35bb11f9767d145809e5a98548d4fd3b20fd77318db8774
+    container_name: rustfs
+    restart: unless-stopped
+    user: 0:0
+    ports:
+      - 9000:9000
+      - 9001:9001
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+    environment:
+      RUSTFS_ACCESS_KEY: admin
+      RUSTFS_SECRET_KEY: casaos
+      RUSTFS_CONSOLE_CORS_ALLOWED_ORIGINS: '*'
+      RUSTFS_OBS_LOGGER_LEVEL: warn
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: RustFS
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustfs/icon.png
+      homepage.description: S3 object store written in Rust
+      glance.name: RustFS
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/rustfs/icon.png
+      glance.description: S3 object store written in Rust
+x-casaos:
+  id: com.junkerderprovinz.rustfs
+  main: rustfs
+  index: /
+  port_map: '9001'
+  scheme: http
+  title:
+    en_US: RustFS
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.rustfs/assets/icon.png
+  version: 1.0.7

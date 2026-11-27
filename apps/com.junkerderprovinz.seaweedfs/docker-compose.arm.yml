@@ -1,0 +1,32 @@
+name: seaweedfs
+services:
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest@sha256:9625c162de829002a1ca7d206b2cabe4ebcb67e261315508dac5a6d2ef43a159
+    container_name: seaweedfs
+    restart: unless-stopped
+    ports:
+      - 8333:8333
+      - 23646:23646
+      - 9333:9333
+      - 8888:8888
+    volumes:
+      - /DATA/AppData/$AppID/data:/data
+    labels:
+      homepage.href: ''
+      homepage.group: Backup
+      homepage.name: SeaweedFS
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seaweedfs/icon.png?v=2
+      homepage.description: S3-compatible object store
+      glance.name: SeaweedFS
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/seaweedfs/icon.png?v=2
+      glance.description: S3-compatible object store
+x-casaos:
+  id: com.junkerderprovinz.seaweedfs
+  main: seaweedfs
+  index: /
+  port_map: '23646'
+  scheme: http
+  title:
+    en_US: SeaweedFS
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.seaweedfs/assets/icon.png
+  version: 4.55.0

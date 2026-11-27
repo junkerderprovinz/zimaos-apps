@@ -1,0 +1,25 @@
+{
+  "tagline": "Self-hosted GitHub Actions runners for several repositories of a personal account in one container, removed from GitHub again when it stops.",
+  "description": "Self-hosted GitHub Actions runners for several repositories in one container.",
+  "category": "Developer",
+  "author": "Junker der Provinz",
+  "developer": "Junker der Provinz",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "repo": "https://github.com/junkerderprovinz/github-runner",
+  "support": "https://github.com/junkerderprovinz/github-runner/issues",
+  "title": "GitHub-Runner",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.github-runner",
+  "version": "1.0.1",
+  "categories": [
+    "developer"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 853553658,
+    "arm64": 734079633
+  }
+}

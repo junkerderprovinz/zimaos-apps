@@ -1,0 +1,45 @@
+name: cannoncommander
+services:
+  cannoncommander:
+    image: junkerderprovinz/cannoncommander:latest@sha256:86574370e6bb5ae9d34f83d72e557c1363163a403b076a2426694cc604a84599
+    container_name: cannoncommander
+    restart: unless-stopped
+    hostname: cannoncommander
+    ports:
+      - 8480:80
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/mnt/user
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+      TZ: $TZ
+      CC_UNRAID_SOCKET: 'false'
+    labels:
+      homepage.href: ''
+      homepage.group: Tools
+      homepage.name: CannonCommander
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cannoncommander/icon.png?v=2
+      homepage.description: Two-panel file manager
+      glance.name: CannonCommander
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cannoncommander/icon.png?v=2
+      glance.description: Two-panel file manager
+    devices:
+      - /dev/fuse
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
+      - DAC_OVERRIDE
+    security_opt:
+      - apparmor:unconfined
+x-casaos:
+  id: com.junkerderprovinz.cannoncommander
+  main: cannoncommander
+  index: /
+  port_map: '8480'
+  scheme: http
+  title:
+    en_US: CannonCommander
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.cannoncommander/assets/icon.png
+  version: 1.4.2

@@ -1,0 +1,37 @@
+name: deckcraft
+services:
+  deckcraft:
+    image: junkerderprovinz/deckcraft:latest
+    container_name: deckcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32011:3001
+      - 32010:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: DeckCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/deckcraft/icon.png
+      homepage.description: Build and present slide decks in the browser
+      glance.name: DeckCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/deckcraft/icon.png
+      glance.description: Build and present slide decks in the browser
+x-casaos:
+  id: com.junkerderprovinz.deckcraft
+  main: deckcraft
+  index: /
+  port_map: '32011'
+  scheme: https
+  title:
+    en_US: DeckCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.deckcraft/assets/icon.png
+  version: 1.1.2

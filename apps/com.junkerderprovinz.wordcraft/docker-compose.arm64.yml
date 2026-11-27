@@ -1,0 +1,37 @@
+name: wordcraft
+services:
+  wordcraft:
+    image: junkerderprovinz/wordcraft:latest@sha256:b579adae529e1e619f86b7be3833b799f795296c3c53b9a8d11a578c720e43d6
+    container_name: wordcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32171:3001
+      - 32170:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: WordCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/wordcraft/icon.png
+      homepage.description: Word processor in the browser
+      glance.name: WordCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/wordcraft/icon.png
+      glance.description: Word processor in the browser
+x-casaos:
+  id: com.junkerderprovinz.wordcraft
+  main: wordcraft
+  index: /
+  port_map: '32171'
+  scheme: https
+  title:
+    en_US: WordCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.wordcraft/assets/icon.png
+  version: 1.1.2

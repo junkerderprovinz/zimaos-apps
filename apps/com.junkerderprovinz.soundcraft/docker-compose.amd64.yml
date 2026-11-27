@@ -1,0 +1,37 @@
+name: soundcraft
+services:
+  soundcraft:
+    image: junkerderprovinz/soundcraft:latest@sha256:fde3b2a87ce32f4f9a20b3c083154e78364b058094f2d08bc03c86dfe17d091a
+    container_name: soundcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32141:3001
+      - 32140:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Media
+      homepage.name: SoundCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/soundcraft/icon.png
+      homepage.description: Multitrack audio workstation
+      glance.name: SoundCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/soundcraft/icon.png
+      glance.description: Multitrack audio workstation
+x-casaos:
+  id: com.junkerderprovinz.soundcraft
+  main: soundcraft
+  index: /
+  port_map: '32141'
+  scheme: https
+  title:
+    en_US: SoundCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.soundcraft/assets/icon.png
+  version: 1.1.2

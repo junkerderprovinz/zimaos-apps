@@ -1,0 +1,28 @@
+{
+  "tagline": "Passkey login for every app on your server that speaks OpenID Connect, with users, groups and an audit log, on SQLite or PostgreSQL.",
+  "description": "A small OpenID Connect provider that signs people in with passkeys instead of passwords. Put it in front of the apps on your server that support OIDC login, from the photo library to the dashboards, and all of them share one login: a fingerprint, a face or a security key. Nobody has a password left to reuse or leak.",
+  "category": "Others",
+  "author": "Junker der Provinz",
+  "developer": "Pocket ID",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "tips": {
+    "before_install": "Set APP_URL, ENCRYPTION_KEY under Custom Installation before the first start. Generate ENCRYPTION_KEY with openssl rand -base64 32 and keep a copy: without it the stored data cannot be read. Passkeys need HTTPS, so APP_URL is the address of the reverse proxy in front of Pocket ID."
+  },
+  "repo": "https://github.com/junkerderprovinz/unraid-apps/blob/main/pocket-id/README.md",
+  "support": "https://github.com/junkerderprovinz/unraid-apps/issues",
+  "title": "Pocket-ID",
+  "base_url": "https://junkerderprovinz.github.io/zimaos-apps",
+  "id": "com.junkerderprovinz.pocket-id",
+  "version": "2.19.3",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 35215700,
+    "arm64": 33066214
+  }
+}

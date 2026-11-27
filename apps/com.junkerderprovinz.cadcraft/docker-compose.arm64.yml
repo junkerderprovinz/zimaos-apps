@@ -1,0 +1,37 @@
+name: cadcraft
+services:
+  cadcraft:
+    image: junkerderprovinz/cadcraft:latest@sha256:50526caf53473d82c07b8ce5a1c5a8f05827349d5468c85a6ddfd203c75ac7d4
+    container_name: cadcraft
+    restart: unless-stopped
+    shm_size: 1gb
+    ports:
+      - 32001:3001
+      - 32000:3000
+    volumes:
+      - /DATA/AppData/$AppID:/config
+      - /DATA:/storage
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      UMASK: '022'
+    labels:
+      homepage.href: ''
+      homepage.group: Productivity
+      homepage.name: CADCraft
+      homepage.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cadcraft/icon.png
+      homepage.description: 2D drafting with DXF and DWG in the browser
+      glance.name: CADCraft
+      glance.icon: https://raw.githubusercontent.com/junkerderprovinz/unraid-apps/main/cadcraft/icon.png
+      glance.description: 2D drafting with DXF and DWG in the browser
+x-casaos:
+  id: com.junkerderprovinz.cadcraft
+  main: cadcraft
+  index: /
+  port_map: '32001'
+  scheme: https
+  title:
+    en_US: CADCraft
+  icon: https://junkerderprovinz.github.io/zimaos-apps/apps/com.junkerderprovinz.cadcraft/assets/icon.png
+  version: 1.1.2
